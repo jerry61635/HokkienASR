@@ -1,0 +1,14 @@
+cluster-phones exp/tri1/treeacc data/lang/phones/sets.int exp/tri1/questions.int 
+WARNING (cluster-phones[5.5.1049~1-4592c5]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 2 
+WARNING (cluster-phones[5.5.1049~1-4592c5]:AutomaticallyObtainQuestions():build-tree.cc:702) AutomaticallyObtainQuestions: no stats available for phone set: 3 
+WARNING (cluster-phones[5.5.1049~1-4592c5]:AutomaticallyObtainQuestions():build-tree.cc:709) All or all but one of your classes of phones had no data. Note that we only consider data where pdf-class is in the set ( 1 ).  If you have an unusual HMM topology this may not be what you want; use the --pdf-class-list option to change this if needed. See also any warnings above.
+ASSERTION_FAILED (cluster-phones[5.5.1049~1-4592c5]:ObtainSetsOfPhones():build-tree.cc:567) Assertion failed: (num_leaves < static_cast<int32>(clust_assignments.size()))
+
+[ Stack-Trace: ]
+cluster-phones(kaldi::MessageLogger::LogMessage() const+0x794) [0x55e650e69e56]
+cluster-phones(kaldi::KaldiAssertFailure_(char const*, char const*, int, char const*)+0x72) [0x55e650e6a7fd]
+cluster-phones(kaldi::AutomaticallyObtainQuestions(std::vector<std::pair<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >, kaldi::Clusterable*>, std::allocator<std::pair<std::vector<std::pair<int, int>, std::allocator<std::pair<int, int> > >, kaldi::Clusterable*> > >&, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > > const&, std::vector<int, std::allocator<int> > const&, int, std::vector<std::vector<int, std::allocator<int> >, std::allocator<std::vector<int, std::allocator<int> > > >*)+0x1e5a) [0x55e650ddd472]
+cluster-phones(main+0x5ab) [0x55e650dcafd4]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf3) [0x7f7ee5938083]
+cluster-phones(_start+0x2e) [0x55e650dca96e]
+
