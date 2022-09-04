@@ -1,3 +1,4 @@
+from cmath import exp
 import csv
 import change_to_number
 file = open('SuiSiannUTF8.csv', newline='', encoding='utf-8')
@@ -90,16 +91,51 @@ for rrr in range(1,len(rows)):
 print('change to number')
 for L in range (len(Lexicon)):
     for s in range (len(Lexicon[L][1])):
-        Lexicon[L][1][s]=change_to_number.change_to_number(Lexicon[L][1][s])
+        now = ''
+        export = ''
+        for n in range(len(Lexicon[L][1][s])):
+            if(Lexicon[L][1][s][n]=='-'):
+                now = change_to_number.change_to_number(now)
+                if(Lexicon[L][1][s][n+1]!='-'):
+                    if export=='':
+                        export=now
+                    else:
+                        export=export+'-'+now
+                    now=''
+                else:
+                    now=now+'-'
+            else:
+                now=now+Lexicon[L][1][s][n]
+        if now!='':
+            now = change_to_number.change_to_number(now)
+            if export=='':
+                export=now
+            else:
+                export=export+'-'+now
+            now=''
+        Lexicon[L][1][s]=export
 
 
 # export Lexicon
 print('export Lexicon')
-export = open('export.csv', 'w', newline='', encoding='utf-8-sig')
+export = open('export202209042137.csv', 'w', newline='', encoding='utf-8-sig')
 writer = csv.writer(export, delimiter=',')
 for L in Lexicon:
     temp=[L[0]]
     for s in L[1]:
         temp.append(s)
     writer.writerow(temp)
+export.close()
+
+export = open('lexicon.txt', 'w', newline='', encoding='utf-8-sig')
+for L in Lexicon:
+    for s in L[1]:
+        now = s+' '
+        for l in range(len(s)):
+            if s[l] == '-':
+                if s[l+1]!='-':
+                    now = now + ' '
+            else:
+                now = now+s[l]
+    export.write(now+'\n')
 export.close()
