@@ -3,6 +3,7 @@ import csv
 import change_to_number
 file = open('SuiSiannUTF8.csv', newline='', encoding='utf-8')
 Lexicon = []
+Sentence = []
 rows = list(csv.reader(file, delimiter=','))
 file.close()
 rows.pop(0)
@@ -21,7 +22,7 @@ def is_Chinese(c):
 # read file
 print('Read File')
 # for row in rows:
-for rrr in range(1,len(rows)):
+for rrr in range(0,len(rows)):
     if rrr%100==0:
         print(rrr)
     row = rows[rrr]
@@ -30,6 +31,7 @@ for rrr in range(1,len(rows)):
     sound=[]
     nowWord=''
     nowSound=''
+    nowSentence=''
     for r in range(len(row[3])):
         chkSound=True
         for p in punctuation:
@@ -49,6 +51,11 @@ for rrr in range(1,len(rows)):
                             nowWord=nowWord+row[2][wordCount]
                             wordCount+=1
                 elif nowSound!='':
+                    nowSound=change_to_number.change_to_number(nowSound)
+                    if nowSentence=='':
+                        nowSentence=nowSound
+                    else:
+                        nowSentence=nowSentence+' '+nowSound
                     word.append(nowWord)
                     nowWord=''
                     sound.append(nowSound)
@@ -67,10 +74,17 @@ for rrr in range(1,len(rows)):
                     nowWord=nowWord+row[2][wordCount]
                     wordCount+=1
     if nowSound!='':
+        nowSound=change_to_number.change_to_number(nowSound)
+        if nowSentence=='':
+            nowSentence=nowSound
+        else:
+            nowSentence=nowSentence+' '+nowSound
         word.append(nowWord)
         nowWord=''
         sound.append(nowSound)
         nowSound=''
+
+    Sentence.append([row[0].split('/')[1].split('.')[0],nowSentence])
 
     for w in range(len(word)):
         chkWord=True
@@ -87,38 +101,32 @@ for rrr in range(1,len(rows)):
         if chkWord:
             Lexicon.append([word[w],[sound[w].lower()]])
 
-# change to number
-print('change to number')
-for L in range (len(Lexicon)):
-    for s in range (len(Lexicon[L][1])):
-        now = ''
-        export = ''
-        for n in range(len(Lexicon[L][1][s])):
-            if(Lexicon[L][1][s][n]=='-'):
-                now = change_to_number.change_to_number(now)
-                if(Lexicon[L][1][s][n+1]!='-'):
-                    if export=='':
-                        export=now
-                    else:
-                        export=export+'-'+now
-                    now=''
-                else:
-                    now=now+'-'
-            else:
-                now=now+Lexicon[L][1][s][n]
-        if now!='':
-            now = change_to_number.change_to_number(now)
-            if export=='':
-                export=now
-            else:
-                export=export+'-'+now
-            now=''
-        Lexicon[L][1][s]=export
+# print(Sentence)
 
+# export corpus.txt
+print('export corpus.txt')
+export = open('corpus.txt', 'w', newline='', encoding='utf-8-sig')
+for L in Sentence:
+    export.write(L[1]+'\n')
+export.close()
+
+# export text_test
+print('export text_test')
+export = open('text_test', 'w', newline='', encoding='utf-8-sig')
+for L in range(0,1000):
+    export.write(Sentence[L][0]+' '+Sentence[L][1]+'\n')
+export.close()
+
+# export text_train
+print('export text_train')
+export = open('text_train', 'w', newline='', encoding='utf-8-sig')
+for L in range(1000,3000):
+    export.write(Sentence[L][0]+' '+Sentence[L][1]+'\n')
+export.close()
 
 # export Lexicon
 print('export Lexicon')
-export = open('export202209042137.csv', 'w', newline='', encoding='utf-8-sig')
+export = open('export_n.csv', 'w', newline='', encoding='utf-8-sig')
 writer = csv.writer(export, delimiter=',')
 for L in Lexicon:
     temp=[L[0]]

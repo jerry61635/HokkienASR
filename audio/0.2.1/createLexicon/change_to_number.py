@@ -103,7 +103,7 @@ number=['iaunnh8','uainnh8','iaunnh4','uainnh4','aunnh8','iannh8','iunnh8','uann
 # for i in range(len(sound)):
 #         print(sound[i],number[i])
 
-def change_to_number(s):
+def tone_to_number(s):
     for n in s:
         if '0'<=n and n<='9':
             return s
@@ -112,6 +112,30 @@ def change_to_number(s):
             s = s.replace(sound[c],number[c][:-1])
             s=s+number[c][-1]
             return s
-    return 'no_sound'
+    return s
 
+def change_to_number(s):
+    now = ''
+    export = ''
+    for n in range(len(s)):
+        if(s[n]=='-'):
+            now = tone_to_number(now)
+            if(s[n+1]!='-'):
+                if export=='':
+                    export=now
+                else:
+                    export=export+'-'+now
+                now=''
+            else:
+                now=now+'-'
+        else:
+            now=now+s[n]
+    if now!='':
+        now = tone_to_number(now)
+        if export=='':
+            export=now
+        else:
+            export=export+'-'+now
+        now=''
+    return export
 # print(change_to_number('uainnh'))
