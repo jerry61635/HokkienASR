@@ -1,5 +1,6 @@
 from cmath import exp
 import csv
+from re import S
 import change_to_number
 file = open('SuiSiannUTF8.csv', newline='', encoding='utf-8')
 Lexicon = []
@@ -135,15 +136,32 @@ for L in Lexicon:
     writer.writerow(temp)
 export.close()
 
-export = open('lexicon.txt', 'w', newline='', encoding='utf-8-sig')
+
+noSameLexicon=[]
+export = open('lexicon_haveSame.txt', 'w', newline='', encoding='utf-8-sig')
 for L in Lexicon:
     for s in L[1]:
-        now = s+' '
+        now = ''
         for l in range(len(s)):
             if s[l] == '-':
                 if s[l+1]!='-':
                     now = now + ' '
             else:
                 now = now+s[l]
-    export.write(now+'\n')
+    export.write(s+' '+now+'\n')
+    wordChk=True
+    for n in noSameLexicon:
+        try:
+            if n[0]==s:
+                wordChk=False
+                break
+        except:
+            a=1
+    if wordChk:
+        noSameLexicon.append([s,now])
+export.close()
+
+export = open('lexicon.txt', 'w', newline='', encoding='utf-8-sig')
+for L in noSameLexicon:
+    export.write(L[0]+' '+L[1]+'\n')
 export.close()
