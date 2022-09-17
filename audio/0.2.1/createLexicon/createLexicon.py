@@ -1,7 +1,8 @@
 from cmath import exp
 import csv
 from re import S
-import change_to_number
+from function import *
+import random
 file = open('SuiSiannUTF8.csv', newline='', encoding='utf-8')
 Lexicon = []
 Sentence = []
@@ -9,99 +10,86 @@ rows = list(csv.reader(file, delimiter=','))
 file.close()
 rows.pop(0)
 
-punctuation = ['-','.',' ',' ','，','。','?','？','「','」','…','！','!','"','、',',','：','；','─',';','）','（','〈','〉','《','》','“','”','(',')','『','』',':']
-special_word=['㧌','𩛩','䆀','𤲍','𪜶','𨑨','𠕇','㽎']
-
-def is_Chinese(c):
-    if c >= u'\u4e00' and c <= u'\u9fa5':
-        return True
-    for word in special_word:
-        if word == c:
-            return True
-    return False
-
 # read file
 print('Read File')
 # for row in rows:
-for rrr in range(0,len(rows)):
+for rrr in range(len(rows)):
     if rrr%100==0:
         print(rrr)
     row = rows[rrr]
-    wordCount=0
-    word=[]
-    sound=[]
-    nowWord=''
-    nowSound=''
-    nowSentence=''
-    for r in range(len(row[3])):
-        chkSound=True
-        for p in punctuation:
-            if row[3][r]==p:
-                chkSound=False
-                if row[3][r]=='-':
-                    nowSound=nowSound+row[3][r]
-                    if row[3][r+1]!='-':
-                        chkWord=True
-                        while chkWord and wordCount<len(row[2])-1:
-                            chkWord=False
-                            for p2 in punctuation:
-                                if p2==row[2][wordCount] and wordCount<len(row[2])-1:
-                                    chkWord=True
-                                    wordCount+=1
-                        if wordCount<len(row[2])-1:
-                            nowWord=nowWord+row[2][wordCount]
-                            wordCount+=1
-                elif nowSound!='':
-                    nowSound=change_to_number.change_to_number(nowSound)
-                    if nowSentence=='':
-                        nowSentence=nowSound
-                    else:
-                        nowSentence=nowSentence+' '+nowSound
-                    word.append(nowWord)
-                    nowWord=''
-                    sound.append(nowSound)
-                    nowSound=''
-        if chkSound:
-            nowSound=nowSound+row[3][r]
-            if nowWord=='' or (wordCount<len(row[2])-1 and not is_Chinese(row[2][wordCount]) and not is_Chinese(nowWord[-1])):
-                chkWord=True
-                while chkWord and wordCount<len(row[2])-1:
-                    chkWord=False
-                    for p2 in punctuation:
-                        if p2==row[2][wordCount] and wordCount<len(row[2])-1:
-                            chkWord=True
-                            wordCount+=1
-                if wordCount<len(row[2])-1:
-                    nowWord=nowWord+row[2][wordCount]
-                    wordCount+=1
-    if nowSound!='':
-        nowSound=change_to_number.change_to_number(nowSound)
-        if nowSentence=='':
-            nowSentence=nowSound
-        else:
-            nowSentence=nowSentence+' '+nowSound
-        word.append(nowWord)
-        nowWord=''
-        sound.append(nowSound)
-        nowSound=''
 
+    #把中文字標點符號拿掉
+    for w in row[2]:#把所有標點符號拿掉
+        if check_punctuation(w):#檢查是不是標點符號
+            row[2] = row[2].replace(w,'')#把標點符號移除
+
+    #檢查有沒有英文字
+    if check_have_english(row[2]):
+        continue
+
+    #整句英文字轉小寫
+    row[3]=sentence_to_lower(row[3])
+    
+
+    #切音成詞
+    sound=[]
+    nowSound=''
+    for r in range(len(row[3])):
+        #確認是不是符號
+        if check_punctuation(row[3][r]):#如果是符號
+            #檢查是不是連字號
+            if check_hyphen(row[3][r]):#是連字號
+                nowSound=nowSound+'-'#加上連字號
+            else:#不是連字號
+                if nowSound!='':#當前音存在
+                    sound.append(nowSound)#把當前音放入到音清單裡面
+                    nowSound=''#清空當前音
+        else:#如果不是符號
+            nowSound=nowSound+row[3][r]#把字母放入到當前音後面
+
+    #所有字轉數字調
+    for s in range(len(sound)):
+        sound[s]=change_to_number(sound[s])
+
+    #儲存整句數字調
+    nowSentence=''
+    for s in sound:
+        if nowSentence!='':
+            nowSentence=nowSentence+' '+s
+        else:
+            nowSentence=s
+    
+    #把中文字切成詞清單
+    word=[]
+    wordidx=0
+    for s in sound:#切字
+        nowWord=''
+        for i in range(word_count(s)):
+            nowWord=nowWord+row[2][wordidx]
+            wordidx=wordidx+1
+        word.append(nowWord)
+
+    #整句英文數字調放入清單，來建立corpus和text
     Sentence.append([row[0].split('/')[1].split('.')[0],nowSentence])
 
+    #辭典，建立lexicon用
     for w in range(len(word)):
         chkWord=True
         for i in range(len(Lexicon)):
             if word[w]==Lexicon[i][0]:
                 chkWord=False
                 chkSound=True
-                for l in Lexicon[i][1]:
+                for l in Lexicon[i][1]:#如果音出現過則跳過
                     if sound[w].lower()==l:
                         chkSound=False
                         break
-                if chkSound:
-                    Lexicon[i][1].append(sound[w].lower())
-        if chkWord:
-            Lexicon.append([word[w],[sound[w].lower()]])
+                if chkSound:#如果音沒出現過則要建立
+                    Lexicon[i][1].append(sound[w])
+        if chkWord:#如果沒出現過則要建立
+            Lexicon.append([word[w],[sound[w]]])
 
+# print(word)
+# print(sound)
 # print(Sentence)
 
 # export corpus.txt
@@ -112,18 +100,21 @@ for L in Sentence:
 export.close()
 
 # export text_test
-print('export text_test')
-export = open('text_test', 'w', newline='', encoding='utf-8-sig')
-for L in range(0,1000):
-    export.write(Sentence[L][0]+' '+Sentence[L][1]+'\n')
-export.close()
-
-# export text_train
-print('export text_train')
+p=0.2 #比例
+print('export text_test and text_train')
 export = open('text_train', 'w', newline='', encoding='utf-8-sig')
-for L in range(1000,3000):
-    export.write(Sentence[L][0]+' '+Sentence[L][1]+'\n')
+export2 = open('text_test', 'w', newline='', encoding='utf-8-sig')
+try:
+    for L in range(len(Sentence)):
+        if random.random()>=p:
+            export.write(Sentence[L][0]+' '+Sentence[L][1]+'\n')
+        else:
+            export2.write(Sentence[L][0]+' '+Sentence[L][1]+'\n')
+except:
+    print('export text')
 export.close()
+export2.close()
+
 
 # export Lexicon
 print('export Lexicon')
@@ -140,6 +131,7 @@ export.close()
 noSameLexicon=[]
 export = open('lexicon_haveSame.txt', 'w', newline='', encoding='utf-8-sig')
 for L in Lexicon:
+    #把連字號拿掉
     for s in L[1]:
         now = ''
         for l in range(len(s)):
@@ -148,7 +140,9 @@ for L in Lexicon:
                     now = now + ' '
             else:
                 now = now+s[l]
-    export.write(s+' '+now+'\n')
+    export.write(s+' '+to_tone(now)+'\n')
+
+    #檢查有沒有出現過
     wordChk=True
     for n in noSameLexicon:
         try:
@@ -157,11 +151,31 @@ for L in Lexicon:
                 break
         except:
             a=1
+    #如果重複出現過就不存
     if wordChk:
         noSameLexicon.append([s,now])
 export.close()
 
 export = open('lexicon.txt', 'w', newline='', encoding='utf-8-sig')
 for L in noSameLexicon:
-    export.write(L[0]+' '+L[1]+'\n')
+    export.write(L[0]+' '+to_tone(L[1])+'\n')
+export.close()
+
+
+print('nonsilence_phones.txt')
+tone=[]
+for L in noSameLexicon:
+    for w in to_tone(L[1]).split(' '):
+        toneCheck=True
+        for t in tone:
+            if w==t:
+                toneCheck=False
+        if toneCheck:
+            tone.append(w)
+tone.sort()
+tone.pop(0)
+# print(tone)
+export = open('nonsilence_phones.txt', 'w', newline='', encoding='utf-8-sig')
+for L in tone:
+    export.write(L+'\n')
 export.close()
