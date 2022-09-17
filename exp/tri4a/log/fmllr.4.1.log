@@ -1,0 +1,28 @@
+# ali-to-post "ark:gunzip -c exp/tri4a/ali.1.gz|" ark:- | weight-silence-post 0.0 1 exp/tri4a/4.mdl ark:- ark:- | gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/train/split1/1/spk2utt exp/tri4a/4.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3a_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split1/1/utt2spk ark:exp/tri4a/trans.1 ark:- ark:- |" ark:- ark:exp/tri4a/tmp_trans.1 
+# Started at Wed Sep  7 15:20:19 CST 2022
+#
+ali-to-post 'ark:gunzip -c exp/tri4a/ali.1.gz|' ark:- 
+weight-silence-post 0.0 1 exp/tri4a/4.mdl ark:- ark:- 
+gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/train/split1/1/spk2utt exp/tri4a/4.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri3a_ali/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/train/split1/1/utt2spk ark:exp/tri4a/trans.1 ark:- ark:- |' ark:- ark:exp/tri4a/tmp_trans.1 
+splice-feats ark:- ark:- 
+apply-cmvn --utt2spk=ark:data/train/split1/1/utt2spk scp:data/train/split1/1/cmvn.scp scp:data/train/split1/1/feats.scp ark:- 
+transform-feats exp/tri3a_ali/final.mat ark:- ark:- 
+transform-feats --utt2spk=ark:data/train/split1/1/utt2spk ark:exp/tri4a/trans.1 ark:- ark:- 
+LOG (ali-to-post[5.5.1047~1-09a63]:main():ali-to-post.cc:73) Converted 2463 alignments.
+LOG (weight-silence-post[5.5.1047~1-09a63]:main():weight-silence-post.cc:95) Done 2463 posteriors.
+WARNING (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance SuiSiann_3458
+WARNING (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance SuiSiann_3459
+WARNING (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance SuiSiann_3461
+WARNING (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance SuiSiann_3462
+LOG (apply-cmvn[5.5.1047~1-09a63]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 2468 utterances, errors on 0
+WARNING (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:118) Did not find posteriors for utterance SuiSiann_3466
+LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is 46.1534 over 1.2203e+06 frames.
+LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:161) Applied transform to 2468 utterances; 0 had errors.
+LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:158) Overall average logdet is 0.585936 over 1.2203e+06 frames.
+LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:161) Applied transform to 2468 utterances; 0 had errors.
+LOG (gmm-est-fmllr[5.5.1047~1-09a63]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.0286036 per frame over 41791 frames.
+LOG (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:143) For speaker SuiSiann, auxf-impr from fMLLR is 0.0286036, over 41791 frames.
+LOG (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:188) Done 2463 files, 5 with no posts, 0 with other errors.
+LOG (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:190) Overall fMLLR auxf impr per frame is 0.0286036 over 41791 frames.
+# Accounting: time=0 threads=1
+# Ended (code 0) at Wed Sep  7 15:20:19 CST 2022, elapsed time 0 seconds
