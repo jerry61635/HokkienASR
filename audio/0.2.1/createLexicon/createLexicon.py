@@ -3,6 +3,7 @@ import csv
 from re import S
 from function import *
 import random
+import shutil
 file = open('SuiSiannUTF8.csv', newline='', encoding='utf-8')
 Lexicon = []
 Sentence = []
@@ -98,6 +99,7 @@ export = open('corpus.txt', 'w', newline='', encoding='utf-8-sig')
 for L in Sentence:
     export.write(L[1]+'\n')
 export.close()
+shutil.copyfile('./corpus.txt','../../../data/local/corpus.txt')
 
 # export text_test
 p=0.2 #比例
@@ -108,12 +110,16 @@ try:
     for L in range(len(Sentence)):
         if random.random()>=p:
             export.write(Sentence[L][0]+' '+Sentence[L][1]+'\n')
+            shutil.copyfile('../ImTong/'+Sentence[L][0]+'.wav','../../train/'+Sentence[L][0]+'.wav')
         else:
             export2.write(Sentence[L][0]+' '+Sentence[L][1]+'\n')
+            shutil.copyfile('../ImTong/'+Sentence[L][0]+'.wav','../../test/'+Sentence[L][0]+'.wav')
 except:
     print('export text')
 export.close()
 export2.close()
+shutil.copyfile('./text_train','../../../data/train/text')
+shutil.copyfile('./text_test','../../../data/test/text')
 
 
 # export Lexicon
