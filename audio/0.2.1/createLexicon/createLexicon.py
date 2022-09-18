@@ -19,6 +19,10 @@ for rrr in range(len(rows)):
         print(rrr)
     row = rows[rrr]
 
+
+    if row[0].split('/')[1].split('.')[0]=='SuiSiann_2266':
+        continue
+
     #把中文字標點符號拿掉
     for w in row[2]:#把所有標點符號拿掉
         if check_punctuation(w):#檢查是不是標點符號
