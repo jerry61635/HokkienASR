@@ -13,7 +13,7 @@ rows.pop(0)
 
 # read file
 print('Read File')
-# for row in rows:
+# for rrr in range(5,6):
 for rrr in range(len(rows)):
     if rrr%100==0:
         print(rrr)
@@ -43,7 +43,7 @@ for rrr in range(len(rows)):
         #確認是不是符號
         if check_punctuation(row[3][r]):#如果是符號
             #檢查是不是連字號
-            if check_hyphen(row[3][r]):#是連字號
+            if check_hyphen(row[3][r]) and nowSound!='':#是連字號
                 nowSound=nowSound+'-'#加上連字號
             else:#不是連字號
                 if nowSound!='':#當前音存在
@@ -54,6 +54,7 @@ for rrr in range(len(rows)):
 
     #所有字轉數字調
     for s in range(len(sound)):
+        # print(sound[s])
         sound[s]=change_to_number(sound[s])
 
     #儲存整句數字調

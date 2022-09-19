@@ -158,6 +158,7 @@ def change_to_number(s):
         now=''
     return export
 
+
 def check_punctuation(s):
     for p in punctuation:
         if s==p:
