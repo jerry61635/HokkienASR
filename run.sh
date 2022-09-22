@@ -71,7 +71,7 @@ if [ $stage -le 0 ]; then
   echo "$0: train mono model"
   # Make some small data subsets for early system-build stages.
   echo "$0: make training subsets"
-  utils/subset_data_dir.sh --shortest data/train 2467 data/train_mono
+  utils/subset_data_dir.sh --shortest data/train $(wc -l < data/train/text) data/train_mono
 
   # train mono
   steps/train_mono.sh --boost-silence 1.25 --cmd "$train_cmd" --nj $num_jobs \

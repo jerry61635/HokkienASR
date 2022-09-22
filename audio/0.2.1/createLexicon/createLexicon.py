@@ -171,7 +171,7 @@ export = open('lexicon.txt', 'w', newline='', encoding='utf-8-sig')
 for L in noSameLexicon:
     export.write(L[0]+' '+to_tone(L[1])+'\n')
 export.close()
-
+shutil.copyfile('./lexicon.txt','../../Language/lexicon.txt')
 
 print('nonsilence_phones.txt')
 tone=[]
