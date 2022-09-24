@@ -11,16 +11,22 @@ rows = list(csv.reader(file, delimiter=','))
 file.close()
 rows.pop(0)
 
+no_use = ['SuiSiann_2266','SuiSiann_1550']
+
 # read file
 print('Read File')
-# for rrr in range(5,6):
+# for rrr in range(3439,3440):
 for rrr in range(len(rows)):
     if rrr%100==0:
         print(rrr)
     row = rows[rrr]
+    # print(row[0])
 
-
-    if row[0].split('/')[1].split('.')[0]=='SuiSiann_2266':
+    chk=False
+    for s in no_use:
+        if row[0].split('/')[1].split('.')[0]==s:
+            chk=True
+    if chk:
         continue
 
     #把中文字標點符號拿掉
@@ -54,8 +60,8 @@ for rrr in range(len(rows)):
 
     #所有字轉數字調
     for s in range(len(sound)):
-        # print(sound[s])
         sound[s]=change_to_number(sound[s])
+        # print(sound[s])
 
     #儲存整句數字調
     nowSentence=''

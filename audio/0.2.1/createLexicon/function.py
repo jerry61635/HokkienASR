@@ -141,18 +141,24 @@ def tone_to_number(s):
         if '0'<=n and n<='9':
             return s
     
-    for con in consonant:
-        for vowel in range(len(single_vowel)):
-            if s.find(con + single_vowel[vowel]) != -1:
-                s = con + single_vowel_number[vowel]
-                return s
+    # for con in consonant:
+    #     for vowel in range(len(single_vowel)):
+    #         if s.find(con + single_vowel[vowel]) != -1:
+    #             s = con + single_vowel_number[vowel]
+    #             return s
+
+    # for c in range(len(sound)):
+    #     if s.find(sound[c])!=-1:
+    #         s = s.replace(sound[c],number[c][:-1])
+    #         s=s+number[c][-1]
+    #         return s
+    # return s
 
     for c in range(len(sound)):
-        if s.find(sound[c])!=-1:
-            s = s.replace(sound[c],number[c][:-1])
-            s=s+number[c][-1]
+        if s[-1*len(sound[c]):]==sound[c]:
+            s=s[0:-1*len(sound[c])]+number[c]
             return s
-    return s
+    # print(s[-2:])
 
 def change_to_number(s):
     now = ''
@@ -244,4 +250,5 @@ def to_tone(sentence):
                     output = output+' '+c+' '+number[i]
                 break
     return output
+
 
