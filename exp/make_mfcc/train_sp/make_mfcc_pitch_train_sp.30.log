@@ -1,557 +1,434 @@
 # paste-feats --length-tolerance=2 "ark:compute-mfcc-feats  --write-utt2dur=ark,t:exp/make_mfcc/train_sp/utt2dur.30 --verbose=2     --config=conf/mfcc.conf scp,p:exp/make_mfcc/train_sp/wav_train_sp.30.scp ark:- |" "ark,s,cs:compute-kaldi-pitch-feats --verbose=2       --config=conf/pitch.conf scp,p:exp/make_mfcc/train_sp/wav_train_sp.30.scp ark:- |     process-kaldi-pitch-feats  ark:- ark:- |" ark:- | copy-feats --compress=true --write-num-frames=ark,t:exp/make_mfcc/train_sp/utt2num_frames.30 ark:- ark,scp:/home/hcilab1/kaldi/egs/formosa/s5/mfcc_perturbed/raw_mfcc_pitch_train_sp.30.ark,/home/hcilab1/kaldi/egs/formosa/s5/mfcc_perturbed/raw_mfcc_pitch_train_sp.30.scp 
-# Started at Wed Sep  7 20:37:54 CST 2022
+# Started at Sun Sep 25 18:28:28 CST 2022
 #
 paste-feats --length-tolerance=2 'ark:compute-mfcc-feats  --write-utt2dur=ark,t:exp/make_mfcc/train_sp/utt2dur.30 --verbose=2     --config=conf/mfcc.conf scp,p:exp/make_mfcc/train_sp/wav_train_sp.30.scp ark:- |' 'ark,s,cs:compute-kaldi-pitch-feats --verbose=2       --config=conf/pitch.conf scp,p:exp/make_mfcc/train_sp/wav_train_sp.30.scp ark:- |     process-kaldi-pitch-feats  ark:- ark:- |' ark:- 
 copy-feats --compress=true --write-num-frames=ark,t:exp/make_mfcc/train_sp/utt2num_frames.30 ark:- ark,scp:/home/hcilab1/kaldi/egs/formosa/s5/mfcc_perturbed/raw_mfcc_pitch_train_sp.30.ark,/home/hcilab1/kaldi/egs/formosa/s5/mfcc_perturbed/raw_mfcc_pitch_train_sp.30.scp 
 compute-mfcc-feats --write-utt2dur=ark,t:exp/make_mfcc/train_sp/utt2dur.30 --verbose=2 --config=conf/mfcc.conf scp,p:exp/make_mfcc/train_sp/wav_train_sp.30.scp ark:- 
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1606
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1607
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1177
 compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:exp/make_mfcc/train_sp/wav_train_sp.30.scp ark:- 
 process-kaldi-pitch-feats ark:- ark:- 
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1608
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1179
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1180
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1186
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1187
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1188
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1189
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1609
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1610
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1611
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1191
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1612
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1613
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1614
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1193
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 10 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1615
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1616
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1617
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1195
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1618
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1196
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1619
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1197
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1620
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1198
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1621
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1622
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1623
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1624
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1200
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1210
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1215
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1217
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1218
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1223
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 20 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1625
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1626
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1627
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1226
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1628
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1227
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1629
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1228
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1239
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1630
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1245
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1631
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1632
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1633
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1634
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1246
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1250
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1256
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1261
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1262
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 30 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1635
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1636
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1265
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1637
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1638
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1639
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1640
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1641
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1642
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1267
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1643
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1268
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1270
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1271
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1272
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1273
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1275
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1276
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1644
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1277
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 40 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1645
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1279
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1646
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1281
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1647
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1286
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1289
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1290
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1291
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1295
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1298
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1300
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1302
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 50 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1305
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1308
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1648
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1309
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1649
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1650
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1651
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1652
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1653
 VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 50 utterances
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1654
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1310
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 50 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1655
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1311
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1312
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1656
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1313
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1314
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1316
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1318
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1657
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1658
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1659
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1660
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1661
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1662
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1663
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1664
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 60 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1665
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1319
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1666
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1321
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1667
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1322
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1668
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1323
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1669
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1670
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1325
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1671
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1326
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1672
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1327
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1673
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1328
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1674
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1333
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1334
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 70 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1675
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1335
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1676
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1337
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1677
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1339
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1342
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1344
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1347
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1349
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1351
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
+VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1353
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1678
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1356
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1679
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1680
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1681
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1682
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1683
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1684
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 80 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1685
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1357
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1686
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1687
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1688
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1689
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1690
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1691
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1692
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1693
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1359
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
 sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
 VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1694
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 90 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1695
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1696
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1697
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1698
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1699
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1700
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1701
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1702
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1703
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1704
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 100 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1705
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1706
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1707
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 100 utterances
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1708
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1709
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1710
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-mfcc-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1711
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:185)  Done 106 out of 106 utterances.
-sox WARN wav: Length in output .wav header will be wrong since can't seek to fix it
-VLOG[1] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:Read():wave-reader.cc:249) Read in RIFF chunk size: 2147479588, data chunk size: 2147479552. Assume 'stream mode' (reading data to EOF).
-LOG (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:110) Done 106 utterances, 0 with errors.
-LOG (process-kaldi-pitch-feats[5.5.1047~1-09a63]:main():process-kaldi-pitch-feats.cc:85) Post-processed pitch for 106 utterances.
-LOG (paste-feats[5.5.1047~1-09a63]:main():paste-feats.cc:158) Done 106 utts, errors on 0
-LOG (copy-feats[5.5.1047~1-09a63]:main():copy-feats.cc:143) Copied 106 feature matrices.
-# Accounting: time=3 threads=1
-# Ended (code 0) at Wed Sep  7 20:37:57 CST 2022, elapsed time 3 seconds
+VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key sp0.9-SuiSiann_1361
+LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:185)  Done 82 out of 82 utterances.
+LOG (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:110) Done 82 utterances, 0 with errors.
+LOG (process-kaldi-pitch-feats[5.5.1047~1-09a63]:main():process-kaldi-pitch-feats.cc:85) Post-processed pitch for 82 utterances.
+LOG (paste-feats[5.5.1047~1-09a63]:main():paste-feats.cc:158) Done 82 utts, errors on 0
+LOG (copy-feats[5.5.1047~1-09a63]:main():copy-feats.cc:143) Copied 82 feature matrices.
+# Accounting: time=5 threads=1
+# Ended (code 0) at Sun Sep 25 18:28:33 CST 2022, elapsed time 5 seconds

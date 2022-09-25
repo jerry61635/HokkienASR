@@ -7,6 +7,8 @@ rm data/test/utt2dur
 rm data/train/utt2dur
 rm data/test/utt2num_frames
 rm data/train/utt2num_frames
+rm data/train/reco2dur
+rm data/train_sp/feats.scp
 
 echo 'Preparing wav.scp'
 python3 wav_prepare.py

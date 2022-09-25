@@ -1,0 +1,874 @@
+# lattice-scale --inv-acoustic-scale=17 "ark:gunzip -c exp/tri1/decode_test/lat.*.gz|" ark:- | lattice-add-penalty --word-ins-penalty=0.5 ark:- ark:- | lattice-best-path --word-symbol-table=exp/tri1/graph/words.txt ark:- ark,t:- | utils/int2sym.pl -f 2- exp/tri1/graph/words.txt | local/wer_hyp_filter > exp/tri1/decode_test/scoring_kaldi/penalty_0.5/17.txt 
+# Started at Sun Sep 25 13:11:15 CST 2022
+#
+lattice-scale --inv-acoustic-scale=17 'ark:gunzip -c exp/tri1/decode_test/lat.*.gz|' ark:- 
+lattice-best-path --word-symbol-table=exp/tri1/graph/words.txt ark:- ark,t:- 
+lattice-add-penalty --word-ins-penalty=0.5 ark:- ark:- 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0011, best cost 67.5198 + 1319.89 = 1387.41 over 258 frames.
+SuiSiann_0011 <SIL> ho2--e5 tsham1-ka1 pi2-sai3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0012, best cost 78.9017 + 1207.29 = 1286.2 over 237 frames.
+SuiSiann_0012 m7 khi3 mai3 ka7 bian2-kiong2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0017, best cost 91.0081 + 1485.8 = 1576.81 over 297 frames.
+SuiSiann_0017 kiann1--gua2 kui2 tua7-loo7 huah4--ah4 kha1 sng1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0019, best cost 53.3158 + 725.613 = 778.929 over 159 frames.
+SuiSiann_0019 i1 khuann3 tian7-si7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0024, best cost 48.2283 + 842.354 = 890.582 over 171 frames.
+SuiSiann_0024 <SIL> a2-be7 phah4--kue3-lai5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0031, best cost 131.491 + 2303.24 = 2434.73 over 468 frames.
+SuiSiann_0031 gua2 siunn7--tioh8 kong2 in1 ui7-tioh8 gua2 huat4-sing1 tsit4-khuan2 pi1-kiok8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0037, best cost 65.4867 + 1043.51 = 1108.99 over 213 frames.
+SuiSiann_0037 kam2-kong2 li2 i2-king1 ai3--gua2--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0038, best cost 94.9007 + 1751.65 = 1846.55 over 360 frames.
+SuiSiann_0038 i1 m7 thiann1--tioh8 si7--m7 thiann1 bo5-i1-huat4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0044, best cost 47.5974 + 810.055 = 857.652 over 159 frames.
+SuiSiann_0044 <SIL> lai5-kue3 han5-kok4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0050, best cost 48.6983 + 507.931 = 556.629 over 120 frames.
+SuiSiann_0050 i1 iau2-be7 lai5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0052, best cost 65.6234 + 809.723 = 875.346 over 177 frames.
+SuiSiann_0052 tak8-ke1 long2 iau2-be7 tsiah8-liau2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0061, best cost 76.4138 + 780.443 = 856.856 over 156 frames.
+SuiSiann_0061 li2 the5-sing1 kah4 lang5 pi2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0065, best cost 40.3557 + 587.772 = 628.128 over 123 frames.
+SuiSiann_0065 bian2 ke1-po5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0228, best cost 61.6697 + 627.037 = 688.707 over 129 frames.
+SuiSiann_0228 gua2 khuann3 li2 be7-song2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0231, best cost 53.8806 + 818.209 = 872.09 over 186 frames.
+SuiSiann_0231 gua2 li2 si2-sim1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0244, best cost 119.573 + 2563.65 = 2683.23 over 549 frames.
+SuiSiann_0244 khuann3 po3-tsua2 tsai1-iann2 siau1-sit4 si7--bo5 <SIL> khuann3 tian7-si7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0248, best cost 51.9134 + 885.019 = 936.933 over 183 frames.
+SuiSiann_0248 siann2-lang5 pak4-too2 iau1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0249, best cost 60.5332 + 646.649 = 707.182 over 135 frames.
+SuiSiann_0249 li2 te2 siunn7 siann2-mih8 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0257, best cost 119.902 + 1674.41 = 1794.32 over 360 frames.
+SuiSiann_0257 than3 lai5 king2 to2 tsit8-e7 suan2-hang7 siong7 tho3-tong3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0259, best cost 168.142 + 2686.64 = 2854.78 over 564 frames.
+SuiSiann_0259 tshiann2-mng7 kong2-ue7 biau5-sut8 lue7-iong5 be7-tang3 iong7 e7-te2 to2 ku7 lai5 theh8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0264, best cost 122.028 + 1722.56 = 1844.58 over 375 frames.
+SuiSiann_0264 kha2 tian7-ue7 tshue7 png7 sio2-tsia2--e5 si7 siann2-mih8 lang5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0267, best cost 78.4974 + 1006.82 = 1085.32 over 216 frames.
+SuiSiann_0267 lin2 tsa1-boo2-kiann2 pai5 te7 kui2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0269, best cost 90.1521 + 2074.05 = 2164.2 over 426 frames.
+SuiSiann_0269 kim1-kue1 hiunn1-koo1 kiat4-thau5-tshai3 tsu2 tshai3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0272, best cost 41.1661 + 714.16 = 755.326 over 159 frames.
+SuiSiann_0272 tse1 ia7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0275, best cost 104.882 + 1571.48 = 1676.36 over 336 frames.
+SuiSiann_0275 <SIL> si7 khi3 tai5-pak4 si7 khi3 tai5-lam5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0281, best cost 87.3987 + 1072.63 = 1160.03 over 231 frames.
+SuiSiann_0281 kin1-ni5 si7 kong1 kuan5 kui2 ni5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0290, best cost 52.1771 + 786.086 = 838.263 over 171 frames.
+SuiSiann_0290 tsue3-kin7 sin1-the2 ho2--bo5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0291, best cost 51.485 + 733.011 = 784.496 over 162 frames.
+SuiSiann_0291 kin7--lai5 sin1-the2 ho2--m7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0293, best cost 47.987 + 536.701 = 584.688 over 117 frames.
+SuiSiann_0293 li2 u7 tsinn5--bo5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0298, best cost 61.386 + 1038.82 = 1100.21 over 210 frames.
+SuiSiann_0298 <SIL> tsinn5 si7 be7-sai2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0314, best cost 53.1002 + 734.565 = 787.665 over 153 frames.
+SuiSiann_0314 tham5 si7 sik4--e5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0318, best cost 185.021 + 3291.91 = 3476.93 over 690 frames.
+SuiSiann_0318 kiam2-tsa1 kiat4-ko2 lai5 khuann3 si7--bo5 oh8-tioh8 liu5-kam2 si7 giam5-tiong7 kam2-moo7 nia7-nia7 huan5-lo2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0320, best cost 342.944 + 5410.29 = 5753.24 over 1110 frames.
+SuiSiann_0320 gua2 koh4 khui3 ling7-gua7 <SIL> the3-sio1 i1 ioh8-a2 hoo7--li2 ui7 na7-si7 hut4 e5 tsiah8-liau2 kui2 tiam2-tsing1 iah4-si7 bo5-hau7 li2 koh4-tsai3 tsit8-liap8 the3-sio1 i5 ioh8-a2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0328, best cost 49.4831 + 607.458 = 656.941 over 126 frames.
+SuiSiann_0328 gua2 kah4 li2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0334, best cost 64.3662 + 808.458 = 872.824 over 162 frames.
+SuiSiann_0334 li2 u7 i1 phah4-piann3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0339, best cost 103.458 + 1533.68 = 1637.13 over 300 frames.
+SuiSiann_0339 gua2 sim1 tshai3 tshiunn7 ping1 hiah4-ni7 ling2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0340, best cost 81.9905 + 1536.29 = 1618.28 over 324 frames.
+SuiSiann_0340 oo1-bin7-la7-pue1 i1 tshu3-kak4-tsiau2 kha2 tua7-tsiah8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0342, best cost 100.088 + 1270.3 = 1370.39 over 249 frames.
+SuiSiann_0342 lok8-a2-tshiu7 pi2 tsiunn1-a2 huat4 liau2 kha1 bat8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0347, best cost 67.7992 + 936.851 = 1004.65 over 201 frames.
+SuiSiann_0347 <SIL> pi2 le5-a2 kha2 kui3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0348, best cost 90.2999 + 1258.56 = 1348.86 over 264 frames.
+SuiSiann_0348 hi5-a2 si5 jia2 siu1 kha2 kin2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0352, best cost 64.7094 + 975.638 = 1040.35 over 216 frames.
+SuiSiann_0352 ti1-a2 tsiann5 pi2-lu7 tse7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0354, best cost 60.3448 + 575.817 = 636.162 over 129 frames.
+SuiSiann_0354 li2 lo3 kue3-jit8 i1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0357, best cost 85.5868 + 1404.66 = 1490.25 over 288 frames.
+SuiSiann_0357 hue2 sui2 kue3-jit8 jim7-ho5 hue1-tshau2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0359, best cost 74.1383 + 1247.24 = 1321.38 over 258 frames.
+SuiSiann_0359 tsioh8 kuan5 kui2--e5 tsit8-tsun7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0369, best cost 72.7757 + 1203.76 = 1276.54 over 249 frames.
+SuiSiann_0369 <SIL> pi2 huat4 kai3 khiam7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0371, best cost 82.315 + 1367.02 = 1449.34 over 282 frames.
+SuiSiann_0371 a1-huat4 pi2 a1-sing5 liong2-kong1 tse7--looh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0372, best cost 93.6131 + 1753.86 = 1847.47 over 366 frames.
+SuiSiann_0372 tshut4-khi3 <SIL> thau5-sing1--e5 hit4 tshut4 pi1-siong1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0375, best cost 104.279 + 1522.91 = 1627.19 over 330 frames.
+SuiSiann_0375 a1-ho2 ke1-a2 a1-tsai5 nng7 kong1-kin1 tang1 nia7-nia7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0380, best cost 90.4674 + 1204.11 = 1294.58 over 267 frames.
+SuiSiann_0380 tsa1-boo2-kiann2 i2 tsa1-poo1--e5 ke3 si2 pue7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0384, best cost 108.348 + 1642.7 = 1751.05 over 348 frames.
+SuiSiann_0384 thuan5-lai5 kong1-si1 pi2 liau2--e5 kong1-si1 kiam2 siann5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0391, best cost 173.135 + 2965.91 = 3139.04 over 612 frames.
+SuiSiann_0391 gua2 ka7 tho2 sann1-tsap8-sann1 tiunn5 tsuan5-lian5 e5 phiau1-a2 hi1-bang7 e7-hu3 siang1-lang5-pai5 to1-a2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0402, best cost 65.6565 + 889.059 = 954.716 over 186 frames.
+SuiSiann_0402 tsiah4 tshai3 long2-tsong2 goo7-tsap8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0409, best cost 120.17 + 1826.98 = 1947.15 over 372 frames.
+SuiSiann_0409 king1 ti1-tiau5 sang3 tsioh8 u7 lak8-pah4-gua7 tsiah4 ti1-a2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0411, best cost 123.609 + 2290.07 = 2413.68 over 456 frames.
+SuiSiann_0411 gua2 hoo7--lang5 toh4 ing7--e5 kui1-khi3 thiau3-lau5 si2-si2--leh4 ho2--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0412, best cost 75.3761 + 1375.88 = 1451.25 over 270 frames.
+SuiSiann_0412 <SIL> thiam2 it4-ji7-tsap8-ban7 li2 hue3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0433, best cost 38.1781 + 563.184 = 601.362 over 120 frames.
+SuiSiann_0433 gua2 khuann3--tioh8--e5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0440, best cost 65.3154 + 761.553 = 826.868 over 156 frames.
+SuiSiann_0440 gua2 thai5-kue3 ke3 e5-a2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0444, best cost 48.9228 + 843.042 = 891.965 over 165 frames.
+SuiSiann_0444 <SIL> tu2-tioh8 king2-tshat4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0449, best cost 94.564 + 1387.42 = 1481.99 over 288 frames.
+SuiSiann_0449 tua7-hiann1 bang7-tioh8 a1-pah4 si2 ke2 tshue7--li2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0455, best cost 38.0347 + 593.101 = 631.136 over 120 frames.
+SuiSiann_0455 m7-thang1 kuann5--tioh8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0456, best cost 90.3951 + 1053.11 = 1143.51 over 219 frames.
+SuiSiann_0456 sim1 to1 si7 gua2 khoo2 tioh8--e5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0467, best cost 115.272 + 1464.23 = 1579.5 over 303 frames.
+SuiSiann_0467 hit4 pun2 tsheh4 bang7-loo7-ting2 ing1-kai1 bian2 u7 tioh8--m7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0503, best cost 59.1661 + 1148.53 = 1207.69 over 231 frames.
+SuiSiann_0503 lang5 tiu7-a2 kuah4--loh8-lai5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0523, best cost 66.5849 + 976.729 = 1043.31 over 195 frames.
+SuiSiann_0523 kuan5 long2 ka7 to3-to3--tshut4-lai5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0526, best cost 132.104 + 1797.75 = 1929.85 over 366 frames.
+SuiSiann_0526 gua2 khuann3 be7 tshut4--lai5 gua2 siah4 tsok4-bun5 tsit8-tak4-a2 tsit8-tiam2-a2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0527, best cost 114.857 + 1516.58 = 1631.44 over 321 frames.
+SuiSiann_0527 gua2 ji7 long2 siau2 a2-be7 tshut4--lai5 kam2-kong2 tsui2--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0530, best cost 155.09 + 2150.57 = 2305.66 over 444 frames.
+SuiSiann_0530 li2 sing1 ka7 mng5 khui1-khui1 lun5-i2 i2 m7-tsiah4 sang3 tshut4--lai5 kheh4-thiann1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0539, best cost 172.175 + 2423.37 = 2595.54 over 501 frames.
+SuiSiann_0539 tshu3 khi3 be2 be7 khi3 long2 tho2 tsi2-iau3 lan2 ing2-uan2 be7 hun1-khui1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0543, best cost 49.5658 + 632.15 = 681.716 over 132 frames.
+SuiSiann_0543 li2 khi2-lai5 tshit4--tsit8-e7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0550, best cost 73.8975 + 781.427 = 855.324 over 165 frames.
+SuiSiann_0550 tse7 gua2 lai7 bian2 kheh4-khi3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0558, best cost 72.0445 + 1189.29 = 1261.33 over 243 frames.
+SuiSiann_0558 lai5-khi3 gua7-khau2 na2 kong2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0566, best cost 82.5592 + 1579.11 = 1661.67 over 324 frames.
+SuiSiann_0566 siunn7-lai5-siunn7-khi3 piau2-si7 li2-tiunn2 gua2 siong7-ho2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0571, best cost 25.318 + 364.226 = 389.544 over 78 frames.
+SuiSiann_0571 jip8-lai5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0572, best cost 24.9505 + 328.414 = 353.364 over 72 frames.
+SuiSiann_0572 loh8-lai5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0578, best cost 27.8955 + 414.697 = 442.592 over 90 frames.
+SuiSiann_0578 si7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0588, best cost 30.0681 + 617.227 = 647.295 over 126 frames.
+SuiSiann_0588 tsui2-tshia1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0595, best cost 141.521 + 2201.64 = 2343.16 over 441 frames.
+SuiSiann_0595 lang5 tsa2 siu1-tann3 tang1 tshu3--ah4 <SIL> hun7 long2 be7 tiau7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0840, best cost 95.0425 + 1977.99 = 2073.03 over 399 frames.
+SuiSiann_0840 kok4-ui7 lai5-pin1 li2 <SIL> huan1-ging5 tsham1-kah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0843, best cost 206.898 + 4085.46 = 4292.36 over 852 frames.
+SuiSiann_0843 tshua3 sio2-tsia2 ah4 <SIL> sio2-tsia2 ling2 ping5-iu2 tshue7--li2 tshiann2 kau3 te7-it4 hok8-bu7-tai5 sio1-tan2 to1-sia7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0844, best cost 204.511 + 4242.36 = 4446.87 over 897 frames.
+SuiSiann_0844 <SIL> thing5 sian1-sinn1 tong1-phing5 sian1-sinn1 lin2--lah4 ku2-tng5 tshue7--li2 tshiann2 kau3 te7-ji7 kui7-tai5 sio1-tan2 to1-sia7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0857, best cost 232.551 + 4065.17 = 4297.72 over 846 frames.
+SuiSiann_0857 kah4 lan2 tai5-uan5 u7 kuan1-he7--e5 si7 tu2-tsiah4 kong2--e5 lam5-ping5 u7 tsui2-khi3 jip8-lai5 hoo7 it4-tit8 kau3 pai3-sann1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0860, best cost 92.5004 + 1527.6 = 1620.1 over 330 frames.
+SuiSiann_0860 bi7-lai5 thinn1-khi3 tsha1-put4-to1 si7 tsit4-tsiong2 tsing5-hing5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0863, best cost 40.9478 + 724.085 = 765.033 over 147 frames.
+SuiSiann_0863 sing5 hian5-a2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0868, best cost 354.089 + 6348.51 = 6702.6 over 1311 frames.
+SuiSiann_0868 tsap8 tang1 <SIL> tong1-lian5 gua2 e7-tang3 hue3 kong2 tsin1 si5-kan1 khai1 ti7 thak8-tsheh4 siah4 lun7-bun5 sa1 tai5-gi2 kau3-tshai5 ka7 tshong3-tsok4 tong5 tso7 siong7 kin2--leh4 bok8-piau1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0875, best cost 156.343 + 3048.05 = 3204.39 over 630 frames.
+SuiSiann_0875 <SIL> hang5 kui2 tang1 gua2 lai5 <SIL> i3 koo3-su7 u7 ho2-khuann3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0881, best cost 207.753 + 4696.37 = 4904.13 over 1005 frames.
+SuiSiann_0881 kak4-hue1-a2 kah4 soo3-hue1-a2 ang5 kin2 tian7 <SIL> hai2-ang1 tai5-gi2 bun5-hak8 khan1 te7 tsit8-pah4 khong3 te2-ki5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0883, best cost 292.838 + 6232.89 = 6525.73 over 1308 frames.
+SuiSiann_0883 tiong1-tsua7 <SIL> phinn3 tshit4 liap8 kim1-sik4 liu2-a2 <SIL> si2 si2 tsiok4 siann5 lang5 lak4-ke3 e7-kun5 siu3 nng7 tsiann5 peh8-thoo3-a2 tsiok4 koo2-tsui1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0892, best cost 151.918 + 3182.07 = 3333.99 over 678 frames.
+SuiSiann_0892 tsu2-lang5 tsit8-e7 tat8-sing5 ti3-su2 kak4-hue1-a2 ki3-tsia2 tshu3-pinn1 tsiann5 khuann3--bo5 tsiunn7-bak8 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0905, best cost 174.85 + 3501.73 = 3676.58 over 726 frames.
+SuiSiann_0905 kak4-hue1-a2 khuann3 iong7 thoo2-te7 sia7 piau2-tsing5 liah8 e5 sin1 tshu3-pinn1 khuann3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0906, best cost 327.829 + 6687.35 = 7015.18 over 1404 frames.
+SuiSiann_0906 <SIL> peh8-sann1-huan1--ah4 nia2 to2-ui7 lai5--e5 gua2 tsit8-e7 kah4-i3 tui3-bak8 kam2-kak4 tsiok4 tshi3-tshak8 ioh8 kak4-hue1-a2 kong2-tioh8 u7-e5 si7 khuan5 tsiok4 tshau3-hue2 tsiok4 bo5-se3-ji7 khui3-khau2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0946, best cost 103.111 + 2485.63 = 2588.74 over 531 frames.
+SuiSiann_0946 han3 tsing1-li5 siunn7-kong2 to2-ui7 khai1-si2 tsau2-tshue7--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0950, best cost 157.642 + 3192.71 = 3350.36 over 657 frames.
+SuiSiann_0950 tua7-hong1 tsit8-e7 <SIL> <SIL> tsiah4 tshiu2 ting7 e5 thoo5 kui1 khian3 pang1--loh8-lai5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0954, best cost 232.451 + 5598.73 = 5831.18 over 1170 frames.
+SuiSiann_0954 ooh4 inn5-a2--ooh4 oo7-a2 phang1-kong3-kong3 <SIL> oo7-a2 tinn1-but4-but4 kim1--lai5 be2 ho2-tsiah8--e5 inn5-a2--ooh4 han3 tsing1-li5 tua7-siann1 lian5 huah4-be7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0963, best cost 311.88 + 6258.51 = 6570.39 over 1323 frames.
+SuiSiann_0963 ping5-siong5-si5-a2 kha2 siau2-tham1 tua7-thau5-a2 ong5--e5 ka7 han3 tsing5 li7 kong2 thau5-ke1 li2 <SIL> kam2 tsiann5 si7 sann1 liap8 bian2-tsinn5 li2 kam2 hoo2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0965, best cost 279.708 + 7298.38 = 7578.09 over 1530 frames.
+SuiSiann_0965 tua7-thau5-a2 sim1-lai7 siunn7-kong2 lau7-hue3-a2 <SIL> bong7 kong2-ue7 hing5 <SIL> tshiunn7 kun2-sng2-tshio3 ka7 kong2 thau5-ke1 hoo7--gua2 sann1 liap8 inn5-a2 khuann3-mai7--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0975, best cost 87.3456 + 1726.75 = 1814.09 over 354 frames.
+SuiSiann_0975 iau2 bue2 kau3-khui3--neh4 kok4-lang5 kong2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0977, best cost 260.462 + 4160.39 = 4420.85 over 855 frames.
+SuiSiann_0977 bin5-a2-tsai3 kam2 kang5-khuan2 si7 tsit8-liap8 kah4 gin5 nng7 liam5 nng7 kak4 gin5 sann1 liap8 bian2-tsinn5--leh4 u7 lang5 mng7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_0995, best cost 194.945 + 4191.86 = 4386.8 over 861 frames.
+SuiSiann_0995 <SIL> lin2 khuann3 au7-piah4 hit4 liap8 khuann3--khi2-lai5 <SIL> ai3--e5--neh4 tua7-thau5-a2 ong5--e5 ka7 ping5-iu2 kong2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1003, best cost 347.376 + 6734.62 = 7081.99 over 1443 frames.
+SuiSiann_1003 lai5--tsia2 inn5-a2--e5 lang5 si7 kang1 pi2 kang5 koh4-khah4 tse7 m7-koh4 lang5 kan1-tann1 siunn7-beh4 tsiah8--lah4 bian2-tsinn5--e5 inn5-a2 lang5 guan7-i3 lap8-tsinn5 hoo7 han3 tsing1-li5 tsiann5 sit4-bong7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1008, best cost 236.01 + 4780.15 = 5016.16 over 1023 frames.
+SuiSiann_1008 han3 tsing1-li5 tsim1-tsiok4 ka7 siau3-lian5-ke1 khuann3-khuann3--leh4 ka7 kong2 siau3-lian5--e5 li2 tsai1-iann2--bo5 guan2 inn5-a2 sann1 liau2 bian2-tsinn5--neh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1014, best cost 416.21 + 8778.56 = 9194.77 over 1866 frames.
+SuiSiann_1014 han3 tsing1-li5 tsit8-e7 siau3-lian5-ke1 sui1-jian5 tshing7 kah4 phoo2-thong1-phoo2-thong1 m7-koh4 kong2-ue7 tsiann5 u7 le2-mau7 khuann3--khi2-lai5 sit8 siu7-kue3 ho2--m7 kau3-iok8 khuan2 koh4-khah4 lan5-tit4--e5 si7 tsit8-si5-a2 be7 siau2-tham1 koh4 tsiok4 u7 tong5-tsing5-sim1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1015, best cost 233.647 + 4480.26 = 4713.9 over 981 frames.
+SuiSiann_1015 siau2-lian5-lang5 li2 si7 tsin1 han2-tit4 khuann3--tioh8--e5 ho2-lang5 li2 kam2 guan7-i3 tso3-huat4 too5-te7 han3 tsing1-li5 mng7 siau3-lian5-ke1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1018, best cost 339.947 + 6930.59 = 7270.54 over 1461 frames.
+SuiSiann_1018 siau3-lian5-ke1 thiann1 tsit8-e7 tshua3 tioh8--bo5 kong2 tang1-si5-a2 tse1 si7 sin5-sian1 pun2 iah4-si7 bak8-tsiu1 kim1 m7-koh4 tsiah4-ni7 tse7 lang5 tang1-tiong1 li2 si7-an2-tsuann2 suan2-tioh8 gua2--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1023, best cost 333.121 + 7251.95 = 7585.07 over 1536 frames.
+SuiSiann_1023 tsing3-lang5 thiann1 han3 tsing1-li5 kong2 long2 kua2 kin1 tann1-thau5 khuann3 suann1-ting2 <SIL> tak8-ke1 sim1-lai7 long2 khuann3 tsit8-siann1 gua2 khoo2--ah4 tsiann3-tshiu2-ping5 u7-iann2 king2 tsit8-puann3--khi3--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1028, best cost 220.14 + 4828.33 = 5048.47 over 1002 frames.
+SuiSiann_1028 m7-koh4 koh4-khah4 thoo3 <SIL> tshut4--lai5 kan1-tann1 e7-tang3 tsin1 hio7-hue2 lai5-kong2 sit8-tsai7 put4 ing1-kai1 hiah4-ni7 tham1-sim1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1036, best cost 183.793 + 3643.93 = 3827.73 over 771 frames.
+SuiSiann_1036 <SIL> tsiong1-tiam2-tsam7 tai5-tang1 kau3--ah4 <SIL> khi3 tai5-pak4 lu2-kheh4 tshiann2 ti7 pun2 tsa1-am3 tshia1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1045, best cost 111.416 + 1963.34 = 2074.76 over 417 frames.
+SuiSiann_1045 tsiunn7-pak4 lu2-kheh4 tshiann2 khi2 te7-sann1 tai7 tsiunn7-tshia1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1047, best cost 100.256 + 2043.7 = 2143.96 over 435 frames.
+SuiSiann_1047 king3-tsiok4 lin2 kian7-khong1 khuai3-lok8 ban7-su7 <SIL> tsai3-hue7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1058, best cost 25.1862 + 379.553 = 404.739 over 78 frames.
+SuiSiann_1058 tiah4-iau3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1067, best cost 76.8928 + 2600.32 = 2677.21 over 567 frames.
+SuiSiann_1067 <SIL> ue7-thau5 gi2-liau7-khoo3 gi2-su5 tah4-phue3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1069, best cost 263.442 + 4557.26 = 4820.7 over 954 frames.
+SuiSiann_1069 gi2-liau7-khoo3 si7 kho2 gi2-gian5 tsai5-liau7 tshng1-khoo3 <SIL> kong2 si7 lim5 siau2 kong2 soo2 sia2--e5 gi2-gian5 bun5-ji7 e5 tsit8-e7 iunn7-pun2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1070, best cost 215.568 + 3696.44 = 3912.01 over 789 frames.
+SuiSiann_1070 thau3-kue3 tsing2-li2 iunn7-pun2 lan2 thang1 thau3-kue3 gi2-liau7-khoo3 liau2-kai2 e5 gi2-gian5 pun5 ji5 e5 su2-iong7 tsing5-hing5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1074, best cost 371.11 + 7123.08 = 7494.19 over 1527 frames.
+SuiSiann_1074 tui3 kiong5-se3 gi2-gian5 lai5-kong2 gi2-liau7-khoo3 kian3-lip8 tai7-piau2 tsit8-e7 gi2-gian5 tiong7-iau3-sing3 in1-ui7 kian3-lip8 liau2-au7 tai3-tong7 e5 gi2-gian5 e5 siong1-kuan1 gian2-kiu3 bah4 suan1-si7 i1 ti7 hak8-sut8-kai3 e5 te7-ui7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1075, best cost 471.294 + 8657.03 = 9128.33 over 1803 frames.
+SuiSiann_1075 tui3 <SIL> gi2-gian5 lai5-kong2 gi2-liau7-khoo3 kian3-lip8 si7 gi2-gian5 hok8-hing1 e5 tsit8-e7 tiong7-iau3 ki1-tshoo2 in1-ui7 u7 li7 iong7-tioh8 tsu2-to7 se3-kai3 e5 tian7-noo2 kho1-ki1 ji5 tshia1 u7 ki1-hue7 hoo7 gi2-gian5 kah4 ki5-thann1 kiong5-se3 gi2-gian5 lian5-kiat4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1078, best cost 143.685 + 2233.51 = 2377.19 over 468 frames.
+SuiSiann_1078 gi2-su5 tah4-phue3 sai1 oh8-tioh8 tsit8-e7 e5 gi2-su5 e5 kuan3-iong7 hong1-huat4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1082, best cost 295.091 + 5655.6 = 5950.69 over 1299 frames.
+SuiSiann_1082 soo2-i2 phah4 kah4 tshia1-tuann1 u7 tah4-phue3 kuan1-he7 ki5-tiong1 e5 su5 na7-si7 iong7 tong5-gi7-su5 ka7 uann7-tiau7 tah4-phue3 kuan1-he7 bo5-it4-ting7 ke3-siok8 tsun5-tsai7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1100, best cost 76.1205 + 997.224 = 1073.34 over 201 frames.
+SuiSiann_1100 nng7 e5 kong1-sik4 sai2 tsioh8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1123, best cost 94.9144 + 1835.56 = 1930.47 over 411 frames.
+SuiSiann_1123 sann1 li7-iong7 su5-lui7 sin3-sit4 the5-sing1 phin2-tsit4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1124, best cost 275.549 + 5130.56 = 5406.11 over 1104 frames.
+SuiSiann_1124 iong7 thong2-ke3 e5 hong1-sik4 lai5 tshue7 gi2-su5 tah4-phue3 kah4 gi2-gian5 tsuan1-ka1 li7-iong7 i1 tsuan1-giap8 ti3-sik4 tshue7--tshut4-lai5--e5 tong1-lian5 ke1-kiam2 <SIL> kang5-khuan2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1134, best cost 239.399 + 4178.79 = 4418.19 over 864 frames.
+SuiSiann_1134 tsong2--si7 i1 ti7 sit8-tse3 su2-iong7 siong7 u7 khuah4 kuan5 e5 khan1-lian5 the5-kiong1 tsuan1-ka1 tsham1-kho2 kah4 gian2-kiu3 hong1-hiong3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1141, best cost 338.157 + 8348.31 = 8686.47 over 1779 frames.
+SuiSiann_1141 m7-koh4 ke3-sng3 gi2-su5 tah4-phue3 lan2 su1-iau3 hun1 hiah4-ni7 iu7 iong7 tua7-lui7 lai5 hun1 <SIL> <SIL> mia5-su5 tong7-su5 hing5-iong5-su5 hu3-su5 lian5-tsiap4-su5 kai3-su5 gi2-khi3-su5 kam2-than3-su5 ting2-ting2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1161, best cost 148.638 + 2678.67 = 2827.31 over 579 frames.
+SuiSiann_1161 pun2-tsiat4 li7-iong7 pio2-keh4 ka1 bun5-ji7 sueh4-bing5 lai5 tian2-si7 sit8-giam7 sing5-ko2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1165, best cost 136.326 + 2846.64 = 2982.96 over 621 frames.
+SuiSiann_1165 pio2-it4 hoo7-sin3-sit4 kah4 siong1-kuan1 too7 kiong7-tong5 su5-tsoo1 soo3-liong7 pi2-le7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1192, best cost 104.687 + 1674.74 = 1779.42 over 381 frames.
+SuiSiann_1192 u7-e5 si7 tai5-hua5 su5-tian2 lai7 tsit4-lo7 su5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1194, best cost 486.308 + 9769.05 = 10255.4 over 2082 frames.
+SuiSiann_1194 su5-tian2 e5 su5 <SIL> kai2-tsin3 pau1-kuat4 ka7 su5 tsuan5-kiu5 mia5-su5 pian7-sik4 ting7-liong7-su5 tshu2-li2 ting2-ting2 sia2-huat4 it4-ti3 e5 bun7-tue5 e5 tsin1 kai2-kuat4 ka7 song2--e5 sia2-huat4 long2 ka1 lok4 lip8--khi3 su5-tian2 lai7-te2 ping7 m7-si7 ho2--e5 kai2-kuat4 hong1-sik4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1199, best cost 52.6104 + 1061.16 = 1113.77 over 228 frames.
+SuiSiann_1199 lak8 bi7-lai5 hong1-hiong3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1216, best cost 160.226 + 3057.46 = 3217.68 over 636 frames.
+SuiSiann_1216 m7-koh4 kong2 lai5-kong2 khi3 iah8-gam5-iu5 san2-giap8 pi2 guan5-pun2 siunn1 koh4-khah4 lun7-mia7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1248, best cost 107.842 + 2087.37 = 2195.21 over 450 frames.
+SuiSiann_1248 kam2-kong2 tak8-ke1 long2 bo5-iau3-bo5-kin2 si7 bo5--i1 huat4-too7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1266, best cost 87.7141 + 1635.87 = 1723.58 over 339 frames.
+SuiSiann_1266 tsit8-e7 siau1-hui3-tsia2 m7-si7 hang7 san2-phin2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1280, best cost 193.695 + 3875.08 = 4068.77 over 804 frames.
+SuiSiann_1280 na7-si7 tsin1-tsiann3 khai1-hong3 liong5-sim1-phio3 thong1-kue3 siu1-huat4 lai5 sing5-jin7 tong5-sing3-hun1 neh4 ki1-lut8 e7-kha1 tua7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1287, best cost 40.0801 + 774.121 = 814.201 over 159 frames.
+SuiSiann_1287 kok4-hue7 gi7-guan5--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1303, best cost 197.208 + 4075.68 = 4272.88 over 852 frames.
+SuiSiann_1303 hoo7 phing5-lun7-tsia2 kong2 lo5-ma2 thian1-tsu2 kau3-ting5 tsit4-ma2 si7 it4-liap8-it4 e5 tsu1-pun2 tsu2-gi7 phue1-phuann3-tsia2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1306, best cost 121.253 + 2196.74 = 2318 over 462 frames.
+SuiSiann_1306 kau3-tsong1 ing1-bun5-pan2 e5 thong1-lu7 u7 sann1-ban7 tshit4-tshing1-gua7 ji7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1315, best cost 250.472 + 4288.09 = 4538.56 over 894 frames.
+SuiSiann_1315 thong1-lu7 u7-lat8 te2 tit8-tsiap4 iong7-tioh8 tsu1-pun2 tsu2-gi7 tsi2 le7 su5 m7-koh4 tsin1 tse7 pai2 tshong3 mia7 tshi7-tiunn5 ng5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1317, best cost 217.442 + 4737.02 = 4954.47 over 1011 frames.
+SuiSiann_1317 ui7-tioh8 siau1-loo7 tshi7-tiunn5 tua7-lat8 sak4 <SIL> siau1-hui3 tsu2-gi7 hoo7--lang5 tsit8-si5-a2 sui5 piau1-ti3 pit4-iau3 e5 khai1-siau1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1341, best cost 212.68 + 4222.8 = 4435.48 over 885 frames.
+SuiSiann_1341 su1-iau3 li7-iong7 puann3 tiam2-tsing1 pian7-soo2 tsinn5 kah4 be2 po2-hiam2 thang1-tsit4 puann1 tiam2-tsing1 kin2-kip4 pan7-pan7--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1343, best cost 388.683 + 7994.59 = 8383.27 over 1707 frames.
+SuiSiann_1343 tshiu2-siok8 <SIL> hoo7 tak8-ke1 hoo7 <SIL> ting1-ki1-tsing3 tak8-ke1 long2 theh8-tioh8 tsing3 kiann1 liau2-au7 lai5--tsia2 hing5-li2 hing5-li2 <SIL> lan2 lai5-kue3 hai2 kuan2 kah4 an1-tsuan5 kiam2-tsa1 ang1 siong7-bue2 lip8--khi3 hau7-ki1-sik4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1345, best cost 349.339 + 5988.84 = 6338.17 over 1272 frames.
+SuiSiann_1345 ting1-ki1 e5 si5 hoo7 tsiau3 kah4 ting1-ki1-tsing3 ho2-se3 lan2 hue3 e5 tho5-hng5 pue7 tang1-kiann1 ai3 sann1 tiam2-puann3 tsing1 tshiann2 tak8-ke1 tsu2 i2 an1-tsuan5 hoo7-siong1 tsiau3-koo3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1350, best cost 201.894 + 3411.22 = 3613.11 over 729 frames.
+SuiSiann_1350 tsit4-ma2 ko1-hiong5 khi2 guan2 ji7-tsap8-tshit4 too7 u7 loh8-png7 mng7 hoo7 tsiok4 tak8-ke1 lu2-too5 huann1-hi2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1354, best cost 295.393 + 5133.97 = 5429.36 over 1095 frames.
+SuiSiann_1354 hui1-ling5-ki1 tse7 kau3-ui7 tshiann2 tak8-ke1 tsiau3 tsing5-au7 loh8-ki1 kau3 khong1 tioh8--e5 si5 tshiann2 tak8-ke1 ti7 khong1 tioh8--m7 tshut4-khau2 hia1 hioh4-khun3 sio1-tan2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1355, best cost 146.894 + 2155.98 = 2302.87 over 474 frames.
+SuiSiann_1355 tak8-ke1 long2 kau7--e5 si5 lan2 tang5-tse5 tshut4 hai2-kuan1 nia2 hing5-li2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1358, best cost 272.271 + 4599.55 = 4871.82 over 963 frames.
+SuiSiann_1358 huan1-ging5 tai5-uan5 e5 ping5-iu2 lai5-guan5 jit8-pun2 tshi3-tham3 <SIL> gua2 si7 to7-iu5 a1-kiat8 kau2 kam2 e5 hing5-ting5 gua2--looh4 kah4 tak8-ke1 tso3-hue2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1368, best cost 242.405 + 4159.72 = 4402.13 over 882 frames.
+SuiSiann_1368 pang5-king1 tsi1-kan1 e7-tang3 hoo7-siong1 liong7 tian7-ue7 kha2 pang5-ho7 lai7--e5 lian5-lok8 un7 <SIL> e7-tang3 kha2 kau2 ho7 hoo7 tsong2-ki1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1372, best cost 401.46 + 7695.31 = 8096.77 over 1596 frames.
+SuiSiann_1372 tak8-ke1 be2 tsin3-tsing5 a1-sing1 tshi3-tsiah8 ho2-tsiah8 tsiah4 be2--e5 phainn2-tsiah8 mai3 be2--e5 tng2--khi3 bo5--lah4 phah4-sng2 be2 tse7 tiam3-guan5 <SIL> pau1--khi2-lai5 tsng1 siunn1-a2 kha1 ho7 kuann5 bian2-tsinn5 ti7 hing5-li2 siunn7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1384, best cost 39.2433 + 632.486 = 671.73 over 135 frames.
+SuiSiann_1384 eh4 ban7-tsai5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1385, best cost 38.0572 + 610.479 = 648.536 over 135 frames.
+SuiSiann_1385 eh4 boo2-tan1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1388, best cost 10.9591 + 295.55 = 306.509 over 60 frames.
+SuiSiann_1388 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1392, best cost 35.2962 + 1092.84 = 1128.13 over 219 frames.
+SuiSiann_1392 <SIL> m7-bian2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1396, best cost 11.0925 + 305.135 = 316.228 over 57 frames.
+SuiSiann_1396 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1406, best cost 10.6343 + 250.172 = 260.806 over 51 frames.
+SuiSiann_1406 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1408, best cost 11.6164 + 521.192 = 532.808 over 93 frames.
+SuiSiann_1408 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1416, best cost 56.045 + 838.655 = 894.7 over 174 frames.
+SuiSiann_1416 khui1-toh4--lah4 tak8-ke1 ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1432, best cost 76.0714 + 1801.78 = 1877.85 over 369 frames.
+SuiSiann_1432 boo2-tan1--ah4 tso3-ping1 kang7-the1 ing5-tshan3--a2--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1438, best cost 115.216 + 1955.78 = 2071 over 414 frames.
+SuiSiann_1438 siok4-kuan1--a2 li2 li2 na2 tse7 tsi2 to1 lang5--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1441, best cost 38.7941 + 623.534 = 662.328 over 129 frames.
+SuiSiann_1441 eh4 a1-ho2-m2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1464, best cost 105.403 + 1796.56 = 1901.96 over 378 frames.
+SuiSiann_1464 iau2-m7-koh4 si7--bo5 lan2 tai5-uan5 ka7 phai3 tai5-gi2-phinn3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1466, best cost 133.359 + 2136.28 = 2269.64 over 426 frames.
+SuiSiann_1466 tsiah4-si7 kuan5 hai7-tioh8 lan2 tai5-uan5 tian7-iann2 bi7-lai5 huat4-tian2 tshut4-loo7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1483, best cost 94.0713 + 1787.71 = 1881.79 over 354 frames.
+SuiSiann_1483 kio3 siau3 <SIL> tsit8-kua2 su1-iann5 be7-sai2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1500, best cost 57.1434 + 970.233 = 1027.38 over 183 frames.
+SuiSiann_1500 huah4--ah4 u7 honnh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1502, best cost 41.3164 + 692.693 = 734.009 over 132 frames.
+SuiSiann_1502 na2 tsng1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1506, best cost 86.9306 + 1053.99 = 1140.92 over 192 frames.
+SuiSiann_1506 li2 kong2 sit4-khi3 tua7 ki1 phinn1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1517, best cost 144.736 + 3348.82 = 3493.55 over 669 frames.
+SuiSiann_1517 bo5-huat4-too7 lai5 king2 lian5-kiat4 kim1-hong7-sia7 lang5--ooh4 tsng1-tsng1--leh4 tng2--khi3 tshai2-ke1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1520, best cost 104.81 + 1470.7 = 1575.51 over 288 frames.
+SuiSiann_1520 li2 kam2 tsin1-tsiann3 u7--leh4 iau3-kin2 tsng1 siann1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1526, best cost 95.2036 + 1277.62 = 1372.83 over 264 frames.
+SuiSiann_1526 si7 li2 tui3 be7 tioh8--e5 soo2-tsai7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1533, best cost 124.942 + 1924.06 = 2049 over 378 frames.
+SuiSiann_1533 mai3 kui1-kang1 e7-hiau2 kong2 tsit8-kua2 bak8 u7-e5 e7--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1534, best cost 104.844 + 1514.93 = 1619.77 over 309 frames.
+SuiSiann_1534 li2--lah4 tsin1-tsiann3 siunn7 ing5 sio1 ke3--lang5 oh8--tsit8-e7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1551, best cost 74.4047 + 824.979 = 899.384 over 177 frames.
+SuiSiann_1551 tshiann2 tak8-ke1 lai5 khuann3 hi3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1570, best cost 73.5539 + 775.229 = 848.782 over 150 frames.
+SuiSiann_1570 li2 koh4 kong2 tsit8-pai2 khuann3-mai7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1572, best cost 61.229 + 630.612 = 691.841 over 129 frames.
+SuiSiann_1572 tshue7 sih4 iah4 ha5--a2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1573, best cost 17.7028 + 600.646 = 618.348 over 114 frames.
+SuiSiann_1573 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1574, best cost 65.4073 + 1136.9 = 1202.31 over 225 frames.
+SuiSiann_1574 gua2 kong2--li2 si7 koo3-mng5-kau2--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1581, best cost 11.6264 + 575.168 = 586.794 over 102 frames.
+SuiSiann_1581 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1592, best cost 53.4726 + 608.58 = 662.052 over 126 frames.
+SuiSiann_1592 si7 tsim1 theh8--e5--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1593, best cost 119.11 + 1765.7 = 1884.81 over 354 frames.
+SuiSiann_1593 si7-an2-tsuann2 pat8-lang5 tang1 khuann3 bian2-tsinn5--e5 ing5 tsit8-e7 ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1599, best cost 43.1578 + 1158.96 = 1202.12 over 264 frames.
+SuiSiann_1599 thiann1--leh4--bo5 tsai1-iann2--ah4--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1610, best cost 23.9153 + 283.339 = 307.254 over 57 frames.
+SuiSiann_1610 pa2-pah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1615, best cost 118.077 + 1704.18 = 1822.25 over 345 frames.
+SuiSiann_1615 kong2 be2--tng2-khi3 gua2 liah8-tso3 sit4-le2 ka7 gua2 phian3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1629, best cost 51.3363 + 512.684 = 564.02 over 102 frames.
+SuiSiann_1629 gua2 siunn7 kheh4-khi3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1632, best cost 40.9375 + 833.011 = 873.948 over 195 frames.
+SuiSiann_1632 pa2-pah4 ma2-mah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1637, best cost 147.917 + 2436.29 = 2584.21 over 471 frames.
+SuiSiann_1637 li2 kau3 kheh4-hiann1 kui1-khi3 hoo7--li2 khi3 tsu7-iu5 ka7 gua2 tshut4-khi3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1638, best cost 40.8011 + 935.288 = 976.089 over 216 frames.
+SuiSiann_1638 tshut4-khi3 ho2--ah4--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1654, best cost 88.882 + 1026.6 = 1115.48 over 219 frames.
+SuiSiann_1654 i1 tsinn5 kuai3 le7 ke3--lang5 tsau2--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1669, best cost 48.4185 + 558.119 = 606.538 over 108 frames.
+SuiSiann_1669 lim1-tsiu2 sih4 ai3--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1672, best cost 29.2036 + 546.775 = 575.978 over 111 frames.
+SuiSiann_1672 kang1-hu1--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1675, best cost 23.248 + 175.123 = 198.371 over 45 frames.
+SuiSiann_1675 eh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1680, best cost 36.2519 + 324.805 = 361.057 over 66 frames.
+SuiSiann_1680 kau3 kong2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1681, best cost 174.64 + 2799.2 = 2973.84 over 555 frames.
+SuiSiann_1681 sua2 be7-ki3-tit4 kong2 gua2 tsit8-e7 pah4-kau2 kah4 kan2-na2--honnh4 oo2 kue3-ni5 e5 ke1-kui1-a2--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1703, best cost 51.1148 + 761.252 = 812.367 over 168 frames.
+SuiSiann_1703 lin2 tse2-tseh4 tng2--lai5--ah4--neh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1705, best cost 77.644 + 987.741 = 1065.39 over 198 frames.
+SuiSiann_1705 nng7 e5 kiat4-hun1 tsiah4-ni7 ku2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1706, best cost 73.4719 + 1173.26 = 1246.73 over 231 frames.
+SuiSiann_1706 senn1-jit8 tsiah4 ka1-tsuah8 bo5--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1721, best cost 52.6671 + 650.153 = 702.82 over 132 frames.
+SuiSiann_1721 song2 ue5 hoo7--gua2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1725, best cost 94.5599 + 1779.65 = 1874.21 over 363 frames.
+SuiSiann_1725 gua2 ke1-kiam2 ji7-sann1-tsap8 hue3 tshun1 tsit8-kiu5-a2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1727, best cost 23.086 + 134.805 = 157.891 over 33 frames.
+SuiSiann_1727 ooh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1734, best cost 170.584 + 3108.65 = 3279.23 over 648 frames.
+SuiSiann_1734 gua2 tu2-tsiah4 ah4 thiann1--e5 phah4-be7 tiam7--neh4 m7-tsiah4--honnh4 tsau2-khi3 be2 tsit8-kua2 <SIL> hoo7--i1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1737, best cost 139.254 + 2832.25 = 2971.51 over 573 frames.
+SuiSiann_1737 gua2 siunn7-tioh8--ah4 li2 tsit4-ma2 theh8-khi3 hoo7 siu3-kuan1--a2--honnh4 tsuat8-tui3 theh8--e5--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1746, best cost 46.4593 + 815.366 = 861.826 over 171 frames.
+SuiSiann_1746 <SIL> ing1-tsun3 neh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1755, best cost 23.9288 + 283.758 = 307.687 over 57 frames.
+SuiSiann_1755 gua2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1765, best cost 24.1468 + 353.989 = 378.135 over 75 frames.
+SuiSiann_1765 aih4-ioh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1771, best cost 80.3079 + 1152.83 = 1233.14 over 219 frames.
+SuiSiann_1771 na2 tsit4-tsun7 iau2-be7 tue3 tng2--lai5--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1772, best cost 100.758 + 1178.71 = 1279.47 over 228 frames.
+SuiSiann_1772 na2 kau2 tsit4-tsun7 iau2-be7 pe2 tng2-lai5 hannh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1774, best cost 84.3252 + 1686.21 = 1770.53 over 378 frames.
+SuiSiann_1774 ooh4 piau2-tsi2 soo2 tsai1 tsin1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1799, best cost 14.0964 + 416.32 = 430.417 over 81 frames.
+SuiSiann_1799 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1802, best cost 27.1638 + 359.14 = 386.303 over 72 frames.
+SuiSiann_1802 khi2-siau2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1810, best cost 107.567 + 1677.17 = 1784.74 over 357 frames.
+SuiSiann_1810 gong7 kiann2--leh4 li2 si7 ai3 siann2-mih8 lang5--hannh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1820, best cost 83.6395 + 1283.77 = 1367.41 over 282 frames.
+SuiSiann_1820 eh4 li2 pang5-king1 <SIL> hit4 ping5--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1822, best cost 23.9804 + 256.064 = 280.044 over 66 frames.
+SuiSiann_1822 to1-sia7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1830, best cost 25.0149 + 328.319 = 353.334 over 75 frames.
+SuiSiann_1830 tiam7-tiam7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1836, best cost 35.8084 + 256.763 = 292.572 over 63 frames.
+SuiSiann_1836 heh4 heh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1838, best cost 40.3434 + 763.929 = 804.272 over 171 frames.
+SuiSiann_1838 ah4 piau2-sio2-ti7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1840, best cost 32.059 + 763.851 = 795.91 over 153 frames.
+SuiSiann_1840 tsng1-thau5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1846, best cost 48.7809 + 639.502 = 688.283 over 141 frames.
+SuiSiann_1846 ban7 li2 hun5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1853, best cost 86.9158 + 1049.24 = 1136.15 over 231 frames.
+SuiSiann_1853 u7-tsing5 lang5 hing5-iann2 ah4 put4 bi7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1862, best cost 54.8133 + 1065.47 = 1120.28 over 225 frames.
+SuiSiann_1862 hoo7 siong7 si7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1864, best cost 28.1454 + 553.196 = 581.342 over 111 frames.
+SuiSiann_1864 tsing5-khong1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1872, best cost 11.3956 + 301.072 = 312.468 over 66 frames.
+SuiSiann_1872 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1876, best cost 61.9243 + 655.325 = 717.249 over 141 frames.
+SuiSiann_1876 li2 lip8 lai5 tse7--tsit8-e7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1877, best cost 24.0998 + 291.301 = 315.401 over 63 frames.
+SuiSiann_1877 ho2--m7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1885, best cost 97.2365 + 1669.36 = 1766.6 over 342 frames.
+SuiSiann_1885 li2 lin2-pe7 kah4 tsiah4 m7 to2-ui7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1886, best cost 11.0152 + 312.631 = 323.646 over 65 frames.
+SuiSiann_1886 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1892, best cost 67.5091 + 899.26 = 966.769 over 177 frames.
+SuiSiann_1892 ka7 li2 ka3-si7 e7-ing7-tsit4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1906, best cost 57.3626 + 840.588 = 897.951 over 168 frames.
+SuiSiann_1906 li2 hak8-giap8 iau3-kin2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1910, best cost 41.5188 + 516.228 = 557.747 over 108 frames.
+SuiSiann_1910 gua2 lai5-khi3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1911, best cost 66.6713 + 1279.16 = 1345.83 over 270 frames.
+SuiSiann_1911 eh4 kau1-thong1 hiah4-ni7 hong1-pian7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1922, best cost 24.383 + 245.122 = 269.505 over 60 frames.
+SuiSiann_1922 a1-peh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1926, best cost 24.362 + 247.717 = 272.079 over 60 frames.
+SuiSiann_1926 a1-peh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1933, best cost 52.9483 + 915.862 = 968.81 over 186 frames.
+SuiSiann_1933 tsiann5-sit8 phainn2 tsa1-boo2-gin2-a2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1934, best cost 37.0104 + 466.437 = 503.448 over 96 frames.
+SuiSiann_1934 kin2 kiann5--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1936, best cost 82.1215 + 1450.87 = 1532.99 over 297 frames.
+SuiSiann_1936 tsit8-e7 siau2-lian5-lang5 ki5-thai7 tsioh8 tsu7-iu5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1947, best cost 61.6784 + 791.811 = 853.49 over 164 frames.
+SuiSiann_1947 m7-thang1 tsin1 tsa2 suann3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1953, best cost 48.462 + 530.127 = 578.589 over 126 frames.
+SuiSiann_1953 tui3 lan2 tsoo2-gai7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1954, best cost 109.66 + 1949.25 = 2058.91 over 414 frames.
+SuiSiann_1954 bo5-lun7 lu5-ho5 li2 gua2 ing1-kai1 hah8 si5-tai7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1963, best cost 40.2884 + 856.962 = 897.251 over 185 frames.
+SuiSiann_1963 heh4 si2-gin2-a2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1964, best cost 16.012 + 664.131 = 680.143 over 129 frames.
+SuiSiann_1964 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1965, best cost 84.505 + 1834.84 = 1919.35 over 396 frames.
+SuiSiann_1965 ioh4 ooh4 li2 bak8-tsiu1 si7--m7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1978, best cost 69.3981 + 1086.53 = 1155.92 over 210 frames.
+SuiSiann_1978 <SIL> pa2-pah4 m7 hoo7--gua2 tshut4--lai5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_1982, best cost 88.663 + 934.981 = 1023.64 over 192 frames.
+SuiSiann_1982 ma2-mah4 kio3 gua2 khi3 be2 tshai3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2007, best cost 78.4992 + 1428.91 = 1507.41 over 315 frames.
+SuiSiann_2007 pe7-bu2 tsa2 si2 sing1 tsu7-iu5--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2012, best cost 40.3353 + 732.325 = 772.66 over 153 frames.
+SuiSiann_2012 hian7-tsai7 tok8-sin1--e5--neh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2017, best cost 14.7792 + 485.555 = 500.334 over 93 frames.
+SuiSiann_2017 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2032, best cost 36.6077 + 510.796 = 547.404 over 108 frames.
+SuiSiann_2032 ooh4 ooh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2033, best cost 63.1215 + 906.273 = 969.395 over 186 frames.
+SuiSiann_2033 thiam1 tsio2 hoo7--li2 tsuann2-iunn7--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2034, best cost 124.762 + 2378.79 = 2503.56 over 492 frames.
+SuiSiann_2034 eh4 li2 si7 huan1-a2-he2-ki1--neh4 khi3--leh4 tsa1-boo2-gin2-a2 si7 khi3-iu5--neh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2036, best cost 94.8821 + 2235.87 = 2330.75 over 450 frames.
+SuiSiann_2036 <SIL> hoo7 kau1--khi3 kio3 lin2-pe7 tsuann2-iunn7--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2037, best cost 27.1503 + 372.845 = 399.995 over 69 frames.
+SuiSiann_2037 khi3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2045, best cost 157.325 + 2204.19 = 2361.52 over 435 frames.
+SuiSiann_2045 gua2 hoo7--li2 be7 theh8 <SIL> it4-ting7 khi3 tshue7 hi3 tsiah4 siau2-kau2--honnh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2046, best cost 66.5548 + 911.025 = 977.58 over 180 frames.
+SuiSiann_2046 luan7-lai5 ji7 m7-bian2 kong2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2061, best cost 10.3009 + 201.704 = 212.005 over 39 frames.
+SuiSiann_2061 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2076, best cost 37.3543 + 910.804 = 948.158 over 165 frames.
+SuiSiann_2076 <SIL> tsau2--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2080, best cost 32.7487 + 1308.42 = 1341.16 over 282 frames.
+SuiSiann_2080 ooh4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2088, best cost 49.0761 + 562.255 = 611.331 over 120 frames.
+SuiSiann_2088 ah4 li2-tiunn2 ua2-lai5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2100, best cost 188.306 + 3578.46 = 3766.77 over 738 frames.
+SuiSiann_2100 tian7 hai7-tioh8 <SIL> i7 tsiah4-si7 king1-tse3 hak8-jin5 tsiu1-khan1 phinn1 siong1-sin3 bun5-tsiong1 e5 kuan1-tiam2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2110, best cost 214.994 + 4753.11 = 4968.1 over 990 frames.
+SuiSiann_2110 m7-koh4 lai5-tsu7 tang7 sin5 tshi7-tiunn5 li7-ik4 i2-king1 tsiam7-tsiam7 khi3 siu1 tsi2-u7 ke3-siok8 tang1 huat4-tian2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2140, best cost 168.449 + 3314.84 = 3483.29 over 753 frames.
+SuiSiann_2140 tsan3-sing5-tsia2 o1-lo2 i1 bu7-sit8 loo7-suann3 m7-koh4 kiong7-ho5-tong2 ti7 kok4-hue7 ka7 te2-tse3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2143, best cost 90.4541 + 1400.46 = 1490.91 over 273 frames.
+SuiSiann_2143 long7 tsu7 tiunn5 iong7 gua7-kau1 tsing3-tshik4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2168, best cost 147.531 + 2545.17 = 2692.7 over 522 frames.
+SuiSiann_2168 huat4-tian2 tshut4 tho2 guan5-tsik4 tshing1-tsho2 e7-tang3 tsip4-hing5 e5 tua7 tsian3-liok8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2171, best cost 131.159 + 2140.46 = 2271.62 over 438 frames.
+SuiSiann_2171 tai7-liong7 kam1-kim3 si7 tsit8-e7 tsin1 tik8-su5 u7-e5 bi2-kok4 hian7-siong7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2200, best cost 262.243 + 4029.86 = 4292.1 over 825 frames.
+SuiSiann_2200 kin7-tai7 lik8-su2 huat4-sing1 kue3-jit8 tiunn5 koh4 <SIL> u7-e5 tsing2-tsok8 too5-sat4 hoo7 lan2 u7 tsit8-e7 e5 koh4 tsit8-e7 ki3-liam7 jit8 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2220, best cost 183.999 + 2722.82 = 2906.82 over 564 frames.
+SuiSiann_2220 bi2-kok4 ti7 ji7 khong3 it4 ji7 ni5 kian3-lip8 khuann3 poo7-hue7 i3-guan7 hue3 ue7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2226, best cost 65.4052 + 1087.18 = 1152.58 over 234 frames.
+SuiSiann_2226 m7-koh4 na7-si7 thak8 tsau2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2227, best cost 172.802 + 3944.92 = 4117.73 over 788 frames.
+SuiSiann_2227 ku7-ni5-te2 kiam2-tshat4-kuann1 sia2 suan1-poo3 tsiam7-thing5 tiau5 tsa2 phue1-phing5 lian5-hap8-kok4 an1-li2-hue7 bo5--i1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2263, best cost 76.6555 + 1289.9 = 1366.56 over 291 frames.
+SuiSiann_2263 jin7 gua2 sia2--e5 m7-si7 si1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2270, best cost 230.338 + 4730.1 = 4960.44 over 999 frames.
+SuiSiann_2270 ki3-lian5 song2--e5 it4-tshe3 tsong2 u7 jit8 li7 lan2 ji7 khi3 tong1-tso3 si1 <SIL> tong1-tso3 oo5-gian5-luan7-gi2 tsha1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2280, best cost 190.665 + 4212.18 = 4402.84 over 870 frames.
+SuiSiann_2280 bo5-lun7 ka1 gua7 thau5-tsing5 bo5-lun7 <SIL> gua7 kuan5 gua7 <SIL> au7 si7 ah8-tioh8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2283, best cost 173.45 + 4153.2 = 4326.65 over 858 frames.
+SuiSiann_2283 <SIL> tshiu7-na5 siong7 sui2--e5 si5-tsun7 ng5 siong7 it4-tshe3 khoo1-tso3 hue2 <SIL> li2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2284, best cost 74.5979 + 1691.08 = 1765.68 over 360 frames.
+SuiSiann_2284 tshiu7 hue2 <SIL> oo1-lang5 mih8 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2296, best cost 87.2966 + 1699.02 = 1786.31 over 363 frames.
+SuiSiann_2296 tsu7 se3-han3 tua7-lang5 <SIL> ka3-si7 lan5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2302, best cost 63.3058 + 805.04 = 868.346 over 165 frames.
+SuiSiann_2302 ji7-tsap8 ni5 ue5 sing1-uah8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2313, best cost 240.701 + 4636.77 = 4877.47 over 978 frames.
+SuiSiann_2313 bo5-kang7 e5 iu5-lok8 khi3-tsai5 sik4-hap8 kang5-khuan2 e5 lang5 tse7 ho2-tann2 lang5 <SIL> tshi3-kik8--e5 kah4-i3 khi2 khi2 oh8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2322, best cost 198.413 + 3848.38 = 4046.8 over 819 frames.
+SuiSiann_2322 tsap8-tshit4 li2 iong7 siann2-mih8 tshi3 <SIL> <SIL> li2 iong7 siann2-mih8 iunn2-tshi7 ka7 e5 sih4 mia7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2329, best cost 115.406 + 1570.3 = 1685.71 over 345 frames.
+SuiSiann_2329 ji7 khong3 it4 ji7 ni5 peh4--gueh8 ti7 tai5-tiong1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2332, best cost 179.609 + 2893.08 = 3072.69 over 603 frames.
+SuiSiann_2332 lam5-lu2 <SIL> si7 hing7-hok4 e5 tai7-tsi3 u7 tsit8-e7 suah4 bo5--i1 i3 bo5--i1 i3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2333, best cost 121.652 + 2425.15 = 2546.8 over 513 frames.
+SuiSiann_2333 ing5-ing5 long2 <SIL> si7 se3-kan1 siong7-kai3 ho2--e5 tai7-tsi3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2335, best cost 182.07 + 3728.08 = 3910.15 over 780 frames.
+SuiSiann_2335 <SIL> ian2-guan5 tso3--khi2-lai5 <SIL> kai3 khuai3-lok8 loo7-pinn1 <SIL> e5 iu2 kui1-jit8 ing5 sian1 sian1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2353, best cost 94.3832 + 1566.19 = 1660.57 over 324 frames.
+SuiSiann_2353 khuann3 tshut4 jin5-sing1 kan2-tan1 e5 to7-li2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2364, best cost 166.832 + 3428.24 = 3595.07 over 717 frames.
+SuiSiann_2364 khuann3--khi2-lai5 tsin1 ho2-tsiah8-khuan2 m7-koh4 ke1-pai5 tsin1 phang1 phinn1 khi2-lai5 be7 phainn2-tsiah8-khuan2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2370, best cost 164.291 + 3577.36 = 3741.65 over 762 frames.
+SuiSiann_2370 li2 khai1-si2 jit8 huan5-lo2 si3-ke3 tsau2-tsong5 siunn7 tsin1 pan7-huat4 tsau2-tshue7 hit4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2381, best cost 211.231 + 4285.94 = 4497.17 over 900 frames.
+SuiSiann_2381 tshu3--li2 li2 e5 jin5-sing1 tsiah4 tsin3-poo7 tak8-jit8 jit8 long2 ti7 pat8-lang5 e5 te7-gak8 lai7-te2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2382, best cost 39.4089 + 669.598 = 709.007 over 141 frames.
+SuiSiann_2382 tak8-jit8 tak8-jit8 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2383, best cost 144.061 + 2281.96 = 2426.02 over 486 frames.
+SuiSiann_2383 lan2 mai3 it4-tit8 hoo7 ka1-ki7 tsiann5-tso3 tshin1-lang5 ping5-iu2 e5 te7-gak8 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2390, best cost 158.98 + 3252.8 = 3411.78 over 708 frames.
+SuiSiann_2390 <SIL> ai3 tshu2 hai7 tsuan2 khi2 thang1-hong1 te7-tsong5 phoo5-sat4 kong1-guan5 king1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2402, best cost 115.227 + 1687.85 = 1803.07 over 363 frames.
+SuiSiann_2402 ji7 khong3 it4 ji7 ni5 lak8--gueh8 ti7 tai5-tiong1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2410, best cost 32.9547 + 729.781 = 762.736 over 153 frames.
+SuiSiann_2410 tsun7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2421, best cost 119.109 + 1941.3 = 2060.41 over 405 frames.
+SuiSiann_2421 gin2-a2 long3-si2 lang5 lau7-bu2 u7 khau3 be2 jit8 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2425, best cost 176.447 + 3635.84 = 3812.29 over 777 frames.
+SuiSiann_2425 ge7-jin5 hun1-tshiu2 lu2-ping5-iu2 kah4 tsing5 lu2-ping5-iu2 long2 tshu3-lai7 pue1 hue3 ue7 tsa1-poo1-lang5--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2430, best cost 183.808 + 4607.62 = 4791.43 over 990 frames.
+SuiSiann_2430 <SIL> long2-si7 khang1-khue3 guan5-lai5 sia7-hue7 tsai3 kiong5-nge7 sin5-sing3 bu2-tshin1 lang5-lang5 pau1-iong5 lu2-sing3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2436, best cost 51.7392 + 764.549 = 816.288 over 159 frames.
+SuiSiann_2436 ma2-mah4 te7 thiann3--li2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2438, best cost 188.089 + 3676.68 = 3864.77 over 783 frames.
+SuiSiann_2438 lan2 ting2 li2 <SIL> e7-hiau2 siunn7 ti7 ka1-ki7 <SIL> ang1-sai3 gin2-a2 tsiah4-ni7-a2 bah4 tai7-tsi3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2453, best cost 154.158 + 3255.7 = 3409.86 over 651 frames.
+SuiSiann_2453 i1-ioh8-hui3 sin1-iann2 ti7 hong1 ti6 <SIL> <SIL> kuan5 ti7 khuan5-king2 lai7-te2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2459, best cost 190.735 + 3459.75 = 3650.49 over 759 frames.
+SuiSiann_2459 ti7 hak8-hau7 kah4 ing1-gi2 ing1-kai1 ing1-kai1 kok4-tse3-hua3 u7 bi7-lai5 ti7 hak8-hau7 ka3 hua5-gi2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2465, best cost 200.355 + 4177.26 = 4377.62 over 897 frames.
+SuiSiann_2465 m7-thang1 oo1-peh8 tan3 pun2 <SIL> tsui2-tshia1 gui5-hiam2 kim1 tsi1 sng2-tsui2 si5-si5 hong5-hue2 ni5-ni5 ping5-an1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2470, best cost 191.855 + 3823.88 = 4015.74 over 765 frames.
+SuiSiann_2470 se3-han3--e5 si5-tsun7 hak8-hau7 pun2 pit4-ki3 phiau1-a2 au7-bin7 long2 e5 <SIL> tsit8-e7 tong5-tong5-tsing3-tsing3 tiong1-kok4-lang5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2476, best cost 200.972 + 4209.13 = 4410.1 over 870 frames.
+SuiSiann_2476 liong7 nng7 siann5 ke3-siau3 suan2-tik8 khuan5-li7 ho2--bo5 gua2 liong7 siann5 hue5-kui7 tsu7-iu5 ho2--bo5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2478, best cost 165.092 + 2946.61 = 3111.7 over 603 frames.
+SuiSiann_2478 <SIL> li2 i2-au7 tioh8-ai3 tui3 gua2 sin5 pit4-ki3 be7-tang3 tshi7 tsiap4-kin7 pak8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2506, best cost 190.08 + 4254.15 = 4444.23 over 849 frames.
+SuiSiann_2506 <SIL> giah8 piau2-si7 te7-it4 hian3 tsok8-gi2 kong1-bun5 thak8 pin5-tong1-kuan7 <SIL> khue1-hok8 thuan5-thong2 mia5-senn3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2513, best cost 89.0251 + 1308.85 = 1397.88 over 258 frames.
+SuiSiann_2513 tsu7 gua2 <SIL> kin1 ka1 khuann3--khi2-lai5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2517, best cost 91.8584 + 2350.35 = 2442.2 over 519 frames.
+SuiSiann_2517 eh4 eh4 ling5-ling5--ah4 ah4 <SIL> ooh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2519, best cost 81.3428 + 1351.51 = 1432.85 over 267 frames.
+SuiSiann_2519 lai5-khi3 hooh4 lai5-khi3 tso3-lang5 khuann3--e5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2522, best cost 104.901 + 1757.67 = 1862.57 over 360 frames.
+SuiSiann_2522 ho7-tso3 siann2-mih8 mia5--hannh4 m7 gua2 kio3-tso3 siu3-lan5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2547, best cost 47.2836 + 827.994 = 875.278 over 165 frames.
+SuiSiann_2547 <SIL> hoo7-khau2 ling2--tsit8-e7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2551, best cost 56.3803 + 731.686 = 788.066 over 156 frames.
+SuiSiann_2551 a1-tshiong1 hiann1 tse7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2558, best cost 140.33 + 1910.92 = 2051.25 over 432 frames.
+SuiSiann_2558 bian2 koh4 pian7 han7 kah4 ni5-te2 li2 tsinn5 hing5--gua2 lang5--ah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2596, best cost 38.37 + 537.554 = 575.924 over 120 frames.
+SuiSiann_2596 kua2 sit4-le2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2599, best cost 118.675 + 2304.25 = 2422.92 over 462 frames.
+SuiSiann_2599 lang5-bin7 khoo2--ah4 <SIL> lu2-ping5-iu2 tshue7 <SIL> hang7 thau5-loo7--bo5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2602, best cost 202.41 + 3513.51 = 3715.92 over 732 frames.
+SuiSiann_2602 ooh4 na7-si7 siunn7-beh4 kah4 li2 tang7 too5--ah4 gua2 to2-su7 ting1 ka7 i1 kai3-siau7 neh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2603, best cost 78.8744 + 2118.62 = 2197.5 over 471 frames.
+SuiSiann_2603 m7-koh4 <SIL> thau5-loo7 <SIL> si7--m7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2606, best cost 90.2526 + 1778.13 = 1868.38 over 378 frames.
+SuiSiann_2606 <SIL> thau5-loo7 pi2 thang1-ho2 siunn7 khuann3-mai7--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2619, best cost 88.1713 + 1265.98 = 1354.15 over 285 frames.
+SuiSiann_2619 ah4 eh4 eh4 eh4 li2 king1-li2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2621, best cost 144.922 + 2512 = 2656.92 over 528 frames.
+SuiSiann_2621 gua2 bin5-a2-tsai3 tshu3-se3 kau5--lah4 pai3-thok4 hia1-e5 siau3 kah4 gua2 sng3-sng3--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2622, best cost 13.8896 + 521.049 = 534.939 over 108 frames.
+SuiSiann_2622 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2633, best cost 51.8764 + 709.277 = 761.154 over 147 frames.
+SuiSiann_2633 kok4-bin5 hak8-hau7 si7--m7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2637, best cost 27.8762 + 376.522 = 404.398 over 87 frames.
+SuiSiann_2637 to1-sia7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2641, best cost 78.1646 + 943.106 = 1021.27 over 201 frames.
+SuiSiann_2641 tue3-tioh8 li2 e5 si7 bun7-tue5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2643, best cost 53.8808 + 940.991 = 994.872 over 195 frames.
+SuiSiann_2643 hau7-tiunn2 siann2-mih8 tai7-tsi3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2658, best cost 185.005 + 2357.58 = 2542.59 over 519 frames.
+SuiSiann_2658 a1-tsiunn1 peh4 li2 ting2-jit8 ka7 gua2 kong2 li2 u7 king1 pang5-king1 sue3--lang5 si7--m7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2660, best cost 70.1554 + 1115.61 = 1185.76 over 234 frames.
+SuiSiann_2660 heh4 siu1 oo1-lang5 si7--m7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2661, best cost 78.7324 + 1072.72 = 1151.46 over 225 frames.
+SuiSiann_2661 heh4 sio1 lang5 tsau2 si7--m7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2663, best cost 90.8339 + 2415.64 = 2506.48 over 498 frames.
+SuiSiann_2663 ooh4 <SIL> <SIL> sun7-sua3 lai5-khi3 khuann3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2667, best cost 212.325 + 4610.37 = 4822.7 over 984 frames.
+SuiSiann_2667 koo1-niu5 tshiunn3-kua1 lan2 pin1-nng5 huann1-hi2 tshio3-siann1 tshiu7-na5 <SIL> guan2 si7 tsiann3-tng1 tshing1-tsho2 un2 siau2-lian5 si5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2668, best cost 179.128 + 3551.77 = 3730.9 over 726 frames.
+SuiSiann_2668 siau2 koo1-niu5 ban2 pin1-nng5 tsit8-e7 ban2 tsit8-e7 <SIL> mui2-jit8 tan2-thai7 bang7 tiong1-ng1 jin5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2672, best cost 39.1237 + 937.601 = 976.725 over 186 frames.
+SuiSiann_2672 aih4 u7-iann2--honnh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2679, best cost 52.2571 + 680.157 = 732.414 over 135 frames.
+SuiSiann_2679 sok4-ka1 li2-tiunn2 m7-tioh8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2682, best cost 130.07 + 1997.4 = 2127.47 over 417 frames.
+SuiSiann_2682 gua2 tsit4-ma2 kiam3 <SIL> a1-tsiunn1 tshu3 u7-ing5 lai5 tse7--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2688, best cost 120.711 + 1553.76 = 1674.47 over 312 frames.
+SuiSiann_2688 kam2 si7 kah4 tsit8-kua2 lan2 ing7--e5 sio2-tsia2 kong2--e5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2694, best cost 37.4972 + 512.761 = 550.258 over 108 frames.
+SuiSiann_2694 lai5 khui1-mng5--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2699, best cost 24.8715 + 316.238 = 341.109 over 69 frames.
+SuiSiann_2699 ho2--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2701, best cost 77.5939 + 1176.78 = 1254.37 over 267 frames.
+SuiSiann_2701 bing5-tsai1 li2 si7 khin1-poh8 bo5-tsing5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2724, best cost 65.0305 + 1434.86 = 1499.89 over 273 frames.
+SuiSiann_2724 kin2--leh4 kin2--leh4 <SIL> khi3--lah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2725, best cost 74.1061 + 1726.27 = 1800.38 over 336 frames.
+SuiSiann_2725 ai1-io7 kin2--leh4 kin2--leh4 ai3--lah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2735, best cost 59.2264 + 1109.86 = 1169.08 over 219 frames.
+SuiSiann_2735 to1-a2 tsit8-e7 lau7-su1--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2742, best cost 73.2706 + 776.616 = 849.887 over 165 frames.
+SuiSiann_2742 guan2 ha5 ti7 to2-ui7 i7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2746, best cost 41.5871 + 661.856 = 703.443 over 138 frames.
+SuiSiann_2746 a1-peh4 si7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2750, best cost 103.94 + 2449.63 = 2553.57 over 510 frames.
+SuiSiann_2750 lau7 hiann1-ti7 <SIL> puah8--loh8-khi3--ah4 li2 m7-thang1 tua7-se3-siann1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2764, best cost 42.5617 + 855.24 = 897.802 over 177 frames.
+SuiSiann_2764 gua7-tse7 tsinn5--ah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2773, best cost 48.6512 + 926.353 = 975.005 over 183 frames.
+SuiSiann_2773 <SIL> li2 tit8-tit8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2793, best cost 79.2494 + 1284.88 = 1364.13 over 264 frames.
+SuiSiann_2793 a1-koo1 kah4 koo1-tiunn7 khuann3--tsit8-e7 gang7-gang7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2796, best cost 99.9942 + 1999.41 = 2099.41 over 429 frames.
+SuiSiann_2796 ku3 su1-iann5--e5 ok4-tshe1 giat8-tsu2 kho2 ti7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2815, best cost 97.5893 + 1770.63 = 1868.22 over 363 frames.
+SuiSiann_2815 tsit4-khuan2 ioh8-a2 tsu2-iau3 iong7 ti7 ti7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2820, best cost 71.1635 + 1081.91 = 1153.08 over 204 frames.
+SuiSiann_2820 <SIL> sann1 hut4 kong1 puann3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2829, best cost 133.679 + 2607.82 = 2741.5 over 546 frames.
+SuiSiann_2829 tsoh4-sit4 ong2 tai5-uan5 bun5-su2 tsi1-hu3 u7 <SIL> ling5-tng5 kui7-tai5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2836, best cost 66.1011 + 1067.25 = 1133.35 over 237 frames.
+SuiSiann_2836 khai1-si2 kah4 si2-sin5 tsau2-sio1-jik4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2842, best cost 134.751 + 1993.36 = 2128.11 over 420 frames.
+SuiSiann_2842 kin1-a2-jit8 khang1-khue3 si7 ka7 kim1-po2-le5 nng7 ue5 hoo7 si2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2845, best cost 122.372 + 2539.83 = 2662.2 over 519 frames.
+SuiSiann_2845 tsong2--si7 thiann1-kinn3 i5 kau3-hak8 thiong3--e5 si5 <SIL> tsit8-siann1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2846, best cost 177.368 + 3223.43 = 3400.8 over 672 frames.
+SuiSiann_2846 sim1 ke2 thai3 huat4-tsok4 e5 si5 tsit8-puann3 in2-khi2 sim1-lut8 put4-tsing2 bo5-tiunn1-ti5 si2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2854, best cost 86.6928 + 2249.54 = 2336.23 over 453 frames.
+SuiSiann_2854 an1-kiam2 khang1-khiah4 ka2-sik4-huan7 phut4-siong1 kuan1-hoo7-jin5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2856, best cost 163.059 + 2321.81 = 2484.87 over 468 frames.
+SuiSiann_2856 gua2 m7-si7 thann1 tsa1-am3 boo2 gua2 kan1-tann1 si7 e5 gong7 tsa1-am3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2862, best cost 65.4213 + 1247.92 = 1313.34 over 243 frames.
+SuiSiann_2862 liong5 khoo2 <SIL> ti7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2867, best cost 281.405 + 4972.38 = 5253.78 over 999 frames.
+SuiSiann_2867 lang5--lah4 ti7 i1 e5 bin7-thau5-tsing5 te2 kong2 kha1 tsah4 gua7-sing2-a2 tu2 khoo2 ooh4 sui5 siunn7--tioh8 kong2 si7 gua7-sing2-a2 tiam7--khi3--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2874, best cost 237.311 + 4880.82 = 5118.13 over 987 frames.
+SuiSiann_2874 <SIL> i2-king1 tua7-tsau3 jin5-ke1 to1 lim5-si5 liong7 tsng1-a2 <SIL> tua7 hang5 loo5 tsit8-tshok4-a2 tua7-tiann2 khuan5 ti7--leh4 tsu2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2878, best cost 68.632 + 1621.71 = 1690.34 over 321 frames.
+SuiSiann_2878 <SIL> iong7 si7 ang5-bin7-huan1-ah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2896, best cost 65.8243 + 1826.74 = 1892.56 over 345 frames.
+SuiSiann_2896 sing1-thai3 khuan5-king2 huat8--e5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2915, best cost 83.1124 + 2377.23 = 2460.34 over 474 frames.
+SuiSiann_2915 <SIL> im1-gak8 kha1-tshng1 sim1-sik4 tshio3-khue1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2927, best cost 273.642 + 5504.55 = 5778.19 over 1143 frames.
+SuiSiann_2927 <SIL> te2-te2 nng7 tiam2-tsing1 sui2 <SIL> khi2-lai5 gin2-a2 siu7-khun3 ti7 ji7 lau5 bo5-thang1 tsiann3 bo5-thang1 lim1 ka1-tiunn2 kiann1 kah4 phih8-phih8-tshuah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2942, best cost 153.788 + 2374.39 = 2528.17 over 498 frames.
+SuiSiann_2942 <SIL> phenn5 tua7--e5 sio2 tho3-pang5 tsi2-u7 kan2-tan1 e5 kui2 ham7 <SIL> u7 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2946, best cost 56.8135 + 910.126 = 966.94 over 186 frames.
+SuiSiann_2946 lan2 tau3-te2 te2-tse3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2948, best cost 154.515 + 2806.91 = 2961.43 over 588 frames.
+SuiSiann_2948 u7 lip8 i2 lip8-tiunn5 sio1-kang7 ang1-a2--e5 mui5-the2 siap8-lau7 tiau1-tsa1 lue7-tsing5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2961, best cost 248.211 + 4764.23 = 5012.44 over 993 frames.
+SuiSiann_2961 <SIL> na2 ka7 thin5 tsiu2 kong2 <SIL> li2 eh4 pi3-kuat4 thai3 tsun2--leh4 i2-au7 tshia1-a2 sai2 to1 toh4 tsi2-kau3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2970, best cost 71.4988 + 1235.25 = 1306.74 over 255 frames.
+SuiSiann_2970 lau7-pe7 lai5 tsau3 kiau2-pun2--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2972, best cost 184.417 + 3436.17 = 3620.59 over 726 frames.
+SuiSiann_2972 in1-ui7 kin1-ni5 liong5 tsioh8 <SIL> phah4-be7 tshi7-tiunn5 iu5 tak8-ke1 sio1 tsai1 be2 thau1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2975, best cost 136.209 + 1853.32 = 1989.53 over 363 frames.
+SuiSiann_2975 tshia1-a2 long2 e5-a2 kui1 khi3 phinn3-a2 long2 ua2--khi3 ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2979, best cost 145.854 + 2328.08 = 2473.93 over 477 frames.
+SuiSiann_2979 su2-iong7 hong1-huat4 kah4 soo2-tsai7 long2 u7 piau1-tsi3 kah4 siah4 bing5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2983, best cost 109.887 + 1032.68 = 1142.57 over 216 frames.
+SuiSiann_2983 gua2 ka7 li2 poh8 khong3 pai7 pai3-ji7 tshit4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2987, best cost 107.592 + 1779.78 = 1887.38 over 354 frames.
+SuiSiann_2987 su3 pong7 ji7 liok8 si7 koo1-phong3 nng7-pah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2988, best cost 187.964 + 3311.37 = 3499.34 over 690 frames.
+SuiSiann_2988 khong3 tse7 tsuan1-tshia1 tse7 tshi7 tshia1 pong7 ki5-thann1 si3-tsap8-peh4 ke3-siau3 kau7 si3-tshing1 khoo1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_2991, best cost 15.0035 + 561.728 = 576.732 over 105 frames.
+SuiSiann_2991 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3000, best cost 145.784 + 2857.11 = 3002.89 over 588 frames.
+SuiSiann_3000 tsong2-thong2-hu2 ti7 tai5-pak4-tshi7 tiong5-khing3-lam5-loo7 it4 tuann7 pa2--ah4 ji7-tsap8-ji7 ho7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3012, best cost 49.2563 + 1133.27 = 1182.52 over 222 frames.
+SuiSiann_3012 tinn1-tinn1 ni5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3015, best cost 149.261 + 2136.36 = 2285.62 over 459 frames.
+SuiSiann_3015 lai5--tsia2 ia7 sin1-niu5 pue7 te5 hoo7--li2 ian2 tsin1 ni5 he5-a2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3016, best cost 48.7648 + 476.103 = 524.868 over 99 frames.
+SuiSiann_3016 na2 si7 li2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3035, best cost 107.704 + 2329.13 = 2436.83 over 489 frames.
+SuiSiann_3035 hit4-si5 <SIL> <SIL> pinn1-a2 tshu3-lai7 si7 tsin1 san3-tshiah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3041, best cost 51.9424 + 761.064 = 813.006 over 165 frames.
+SuiSiann_3041 kin1-a2-jit8 m7-bian2 tsinn5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3042, best cost 42.2701 + 693.811 = 736.081 over 150 frames.
+SuiSiann_3042 m7-bian2 ke1-po5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3049, best cost 74.9517 + 877.159 = 952.111 over 177 frames.
+SuiSiann_3049 se2 kah4 hiah4-ni7 sui2 tioh8--m7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3050, best cost 63.1659 + 908.069 = 971.235 over 180 frames.
+SuiSiann_3050 suan1 kah4 tsiah4-ni7 kin2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3053, best cost 63.2454 + 840.309 = 903.555 over 186 frames.
+SuiSiann_3053 be7 li2 siunn1 kheh4-khi3--lah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3056, best cost 57.5985 + 1337.02 = 1394.62 over 285 frames.
+SuiSiann_3056 <SIL> bin5-a2-am3 un2 loh8-hoo7--e5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3070, best cost 172.45 + 3022.65 = 3195.1 over 636 frames.
+SuiSiann_3070 tsue3-kin7 nng7 kiann7 sia7-hue7 sin1-bun5 hoo7--gua2 koh4 kam2-khai3--khi2-lai5 kong2 be7 sa1 ai3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3076, best cost 87.9839 + 1685.9 = 1773.88 over 342 frames.
+SuiSiann_3076 lang5-lang5 khi3 siu5-tsui2 <SIL> m7 khi3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3087, best cost 109.217 + 1621.2 = 1730.42 over 324 frames.
+SuiSiann_3087 bah4 sing1 kah4 liau5 kiau2-kiau2--leh4 khai1-si2 tsan2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3088, best cost 116.192 + 2136.59 = 2252.79 over 447 frames.
+SuiSiann_3088 ma2-ling5-tsi5 tshang1-thau5 a1-sing5 la7-la7--khui1 thang1 khai1-si2 tsha2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3089, best cost 80.4965 + 1346.08 = 1426.58 over 276 frames.
+SuiSiann_3089 la7-la7--leh4 kah4 khng3 khi2-lai5 hip4--tsit8-si5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3098, best cost 171.51 + 3093.77 = 3265.28 over 615 frames.
+SuiSiann_3098 a1-ti7-a2 a2-be7 huat4 tshui3-khi2 soo2 ka7 png7 poo7-poo7 hoo7--i1 iu7 hoo7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3102, best cost 107.646 + 1659.71 = 1767.35 over 342 frames.
+SuiSiann_3102 ko1-le5 ai3 hang1-hang1 hoo7 nng2 tsiah4 khui1--e5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3106, best cost 49.6623 + 1158.4 = 1208.06 over 216 frames.
+SuiSiann_3106 <SIL> tsui2 ling2-ling2-ling2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3107, best cost 42.9678 + 965.663 = 1008.63 over 180 frames.
+SuiSiann_3107 bin7 hun2-hun2-hun2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3115, best cost 46.9203 + 1061.87 = 1108.79 over 210 frames.
+SuiSiann_3115 phue5-hu1 peh8-peh8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3134, best cost 69.9145 + 1289.08 = 1358.99 over 255 frames.
+SuiSiann_3134 ki3 kiam3 kah4 lai7-siam2-siam2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3144, best cost 84.4692 + 1443.79 = 1528.26 over 288 frames.
+SuiSiann_3144 bin5-i3 iu5 bin7 <SIL> siunn7 tai7-tsi3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3155, best cost 109.36 + 1929.68 = 2039.04 over 396 frames.
+SuiSiann_3155 lin2 nng7 e5 si1-si1-sut8-sut8 si7 te2 kong1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3156, best cost 69.3867 + 1328.41 = 1397.79 over 255 frames.
+SuiSiann_3156 siann1-siann1-ku3-ku3 long2-si7 khi3-phik4 gua7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3160, best cost 84.4393 + 1724.65 = 1809.09 over 336 frames.
+SuiSiann_3160 pan1 tai7-tsi3 thuat4-suann3-thuat4-suann3 long2 tso3-kue3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3165, best cost 55.325 + 1118.83 = 1174.15 over 222 frames.
+SuiSiann_3165 a1-hong5 lang5 lau2-sit8-lau2-sit8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3173, best cost 42.8003 + 886.482 = 929.283 over 180 frames.
+SuiSiann_3173 tsun2-na7 kau2-kuai3-kau2-kuai3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3176, best cost 89.5587 + 1615.46 = 1705.02 over 300 frames.
+SuiSiann_3176 lan2 tshu3--ah4 li2 koh4 bo5-iau3-bo5-kin2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3183, best cost 133.887 + 2890.56 = 3024.45 over 540 frames.
+SuiSiann_3183 <SIL> ai3 jin5 tsong5 tsiong1 ioh8-tsiu2 a1-lim5 pah4-sian1 tsiu2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3199, best cost 154.376 + 2156.27 = 2310.64 over 438 frames.
+SuiSiann_3199 a1-kun1--a2 si7 tse7 siann2-mih8 tshiann2 lai5 na2 kau2 tsit4-tsun7 iau2 kau3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3200, best cost 153.463 + 2672.35 = 2825.81 over 573 frames.
+SuiSiann_3200 tian7-si7 kong2 le2-pai3 thinn1-khi3 khuann3 tshut4-mng5 kam2 su1-iau3 tsu3-i3 siann2-mih8 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3204, best cost 72.9962 + 1384.95 = 1457.95 over 273 frames.
+SuiSiann_3204 phai2-se3 a2-be7 kuat4-ting7 tiam2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3208, best cost 114.991 + 1942.4 = 2057.39 over 399 frames.
+SuiSiann_3208 bian2 kho2-lu7 hian2 tse7 m7-kuan2 <SIL> khi3-tsai5 tioh8--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3213, best cost 89.4741 + 1290.01 = 1379.48 over 264 frames.
+SuiSiann_3213 a1-po5 kah4-i3 sin1-pu7 bo5-kau3 tso3-hue2 eh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3223, best cost 156.147 + 3855.32 = 4011.47 over 777 frames.
+SuiSiann_3223 sat4-bak8-a2 <SIL> u7 nng7-pah4-gua7 phinn3 tshi3 tshinn1-tinn1 tsiah4 tsiah8-tioh8 tshoo1-si1 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3227, best cost 90.2629 + 1903.34 = 1993.6 over 399 frames.
+SuiSiann_3227 <SIL> he5-a2 e5 the2-hing5 tua7-se3 tsha1-put4-to1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3229, best cost 97.3029 + 1985.05 = 2082.35 over 396 frames.
+SuiSiann_3229 <SIL> piau1-te5 ho7-tso3 siann2-mih8 siong7 sik4-tong3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3232, best cost 124.157 + 2587.89 = 2712.05 over 525 frames.
+SuiSiann_3232 nng7 e5 uann7-thiap4--e5 kam2-tsing5 tsin1 <SIL> tshia1 <SIL> sik4-tsui2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3241, best cost 61.9324 + 873.674 = 935.606 over 177 frames.
+SuiSiann_3241 <SIL> tiau7 loo7 tioh8--e5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3242, best cost 88.819 + 1317.22 = 1406.04 over 264 frames.
+SuiSiann_3242 niau1-a2 <SIL> ai3 kah4 lang5 tau3-tin7 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3243, best cost 130.899 + 2091.58 = 2222.47 over 432 frames.
+SuiSiann_3243 a1-kong1 kong2 lai5 tai5-uan5 e5 tsiau2-a2 u7 tsio2-soo3 lau5--loh8-lai5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3258, best cost 91.411 + 1542.79 = 1634.21 over 303 frames.
+SuiSiann_3258 lang5-kheh4 be2 tiam2 <SIL> tsiah8-pa2 tsiah4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3259, best cost 65.1277 + 1099.97 = 1165.1 over 228 frames.
+SuiSiann_3259 a1-ti7-a2 bin5-a2-tsai3 kau3 hia1 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3263, best cost 131.651 + 1984.83 = 2116.48 over 399 frames.
+SuiSiann_3263 tai5-pak4 kau3 ko1-hiong5 gua7 ku2 ing1-kai1 bian2 gua7 ku2--honnh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3276, best cost 66.4706 + 903.228 = 969.699 over 183 frames.
+SuiSiann_3276 li2 it4-ting7 kha1 tsin2-tsok4--leh4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3288, best cost 86.4734 + 972.107 = 1058.58 over 213 frames.
+SuiSiann_3288 gua2 ka7 kai2-sueh4 hit4 hang7 tai7-tsi3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3294, best cost 74.0538 + 852.524 = 926.578 over 174 frames.
+SuiSiann_3294 gua2 theh8 phue1 hoo7--li2 khuann3 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3296, best cost 38.3608 + 541.738 = 580.099 over 111 frames.
+SuiSiann_3296 li2 tsiah8-pa2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3297, best cost 73.3441 + 811.343 = 884.687 over 162 frames.
+SuiSiann_3297 li2 tioh8-ai3 tsiah8--lah4 hoo7 pa2 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3310, best cost 103.106 + 1387.08 = 1490.19 over 285 frames.
+SuiSiann_3310 lang5 be2 bo5-ing5 kong3-phua3 hit4 peh4 po1-le5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3325, best cost 51.8356 + 477.115 = 528.951 over 102 frames.
+SuiSiann_3325 i1 ti7 tshu3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3326, best cost 49.6273 + 520.731 = 570.358 over 111 frames.
+SuiSiann_3326 i1 bo5--i1 siunn7--li2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3328, best cost 51.6723 + 805.177 = 856.85 over 171 frames.
+SuiSiann_3328 gua2 ping5-iu2 kui2--e5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3340, best cost 52.4015 + 850.648 = 903.049 over 183 frames.
+SuiSiann_3340 au7-painn3 ai3--gua2 tsun2-si5 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3352, best cost 41.0674 + 623.102 = 664.169 over 123 frames.
+SuiSiann_3352 m7-si7 gua2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3354, best cost 20.4576 + 679.672 = 700.13 over 123 frames.
+SuiSiann_3354 <SIL> <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3355, best cost 115.178 + 1920.69 = 2035.87 over 396 frames.
+SuiSiann_3355 kau3 tsai5-san2 ke2 liau2 bai2 tian1-to3 <SIL> phainn2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3357, best cost 75.2143 + 986.596 = 1061.81 over 204 frames.
+SuiSiann_3357 gua2 mih8 tsiann5-tso3 be7 ho2-se3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3361, best cost 52.3099 + 887.571 = 939.881 over 180 frames.
+SuiSiann_3361 a1-san1--a2 me5 kue3--ah4 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3372, best cost 161.151 + 2511.37 = 2672.52 over 528 frames.
+SuiSiann_3372 siau1-sit4 gua2 i2-king1 tshing1-tsho2--ah4 to1-sia7 li2 tsuan1-kang1 the3 hi5 tsau3 tsit8-tsun7 <SIL> 
+LOG (lattice-scale[5.5.1047~1-09a63]:main():lattice-scale.cc:107) Done 431 lattices.
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3387, best cost 244.209 + 4233.92 = 4478.13 over 867 frames.
+SuiSiann_3387 <SIL> iunn5-a2 te2 iau1-tshiann2 sin3-gak8-thuan5 e5 tsing1 tsu2 tshiunn7 si7 kah4 tsap8-kui2 e5 gi7-kang1 tau3 hip4 huan2-hut8 kong2-ko3 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3405, best cost 151.627 + 2773.79 = 2925.41 over 561 frames.
+SuiSiann_3405 <SIL> hit4 tiunn5 bin5-tshng5 si7--lah4 boo7-tshing1 e5 si7 lak8 su3-hong1--e5 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3425, best cost 166.656 + 3070.7 = 3237.36 over 642 frames.
+SuiSiann_3425 tshin1-tshiunn7 tinn1-kue2 pat4-po2-png7 ting1 ni5-tsueh4 tsiah8-mih8 long2 iong7 tsut8-bi2 lai5 tsioh8 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3426, best cost 114.22 + 2310.58 = 2424.8 over 471 frames.
+SuiSiann_3426 hoo7 a1-kong1 sing3 phainn2--ah4 put4-si5 ti7 siu7-khi3 <SIL> 
+LOG (lattice-add-penalty[5.5.1047~1-09a63]:main():lattice-add-penalty.cc:62) Done adding word insertion penalty to 431 lattices.
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3452, best cost 798.389 + 19430.5 = 20228.8 over 4095 frames.
+SuiSiann_3452 tshin1-tshiunn7 lai5-kong2 tsai7 lan2 tai5-uan5 kin7-kin7 tsit8-tiap4-a2-ku2 kang1-hu1 <SIL> tsiu7 u7 <SIL> tsiu7 <SIL> tsiu7 u7 <SIL> puann3 <SIL> tsiu7 u7 <SIL> soo2-i2 thang1 kong1 tai5-uan5 si7 tsit8-e7 siah4 <SIL> lan2 tai5-uan5 u7 tsit4-khuan2 thian1-jian5 king2 khi3-hau7 tsiong1-lai5 na7-si7 koh4 ing7-sim1 in1 lang5 kang1-hu1 tua7-tua7 lai5 tsing2-tun3 tik4-khak4 tsiann5-tso3 tang1-iunn5 tua7 kong1-hng5 hoo7 tang1-iunn5 e5 lang5 <SIL> ua2-lai5 hiong2-hok4 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:99) For utterance SuiSiann_3463, best cost 159.136 + 3153.75 = 3312.89 over 672 frames.
+SuiSiann_3463 thiann3--li2 iann5 ke2 thun1 se3-kan1 lua7 jin5-sing1 tu3 i2 kiu5 ngoo2 <SIL> 
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:124) Overall cost per frame is 5.06343 = 0.265276 [graph] + 4.79815 [acoustic] over 182438 frames.
+LOG (lattice-best-path[5.5.1047~1-09a63]:main():lattice-best-path.cc:128) Done 431 lattices, failed for 0
+# Accounting: time=0 threads=1
+# Ended (code 0) at Sun Sep 25 13:11:15 CST 2022, elapsed time 0 seconds

@@ -10,9 +10,10 @@ set -euo pipefail
 # iVector-related parts of the script.  See those scripts for examples
 # of usage.
 
+num_jobs=1
 stage=0
 train_set=train
-test_sets="test eval"
+test_sets="test train"
 gmm=tri5a
 
 nnet3_affix=
@@ -46,7 +47,7 @@ fi
 
 if [ $stage -le 2 ]; then
   echo "$0: aligning with the perturbed low-resolution data"
-  steps/align_fmllr.sh --nj 30 --cmd "$train_cmd" \
+  steps/align_fmllr.sh --nj $num_jobs --cmd "$train_cmd" \
     data/${train_set}_sp data/lang $gmm_dir $ali_dir || exit 1
 fi
 
@@ -95,9 +96,9 @@ if [ $stage -le 4 ]; then
 
   echo "$0: training the diagonal UBM."
   # Use 512 Gaussians in the UBM.
-  steps/online/nnet2/train_diag_ubm.sh --cmd "$train_cmd" --nj 30 \
+  steps/online/nnet2/train_diag_ubm.sh --cmd "$train_cmd" --nj $num_jobs \
     --num-frames 700000 \
-    ${temp_data_root}/${train_set}_sp_hires_nopitch_subset 512 \
+    ${temp_data_root}/${train_set}_sp_hires_nopitch_subset 256 \
     exp/nnet3${nnet3_affix}/pca_transform exp/nnet3${nnet3_affix}/diag_ubm
 fi
 
@@ -106,7 +107,7 @@ if [ $stage -le 5 ]; then
   # can be sensitive to the amount of data.  The script defaults to an iVector dimension of
   # 100.
   echo "$0: training the iVector extractor"
-  steps/online/nnet2/train_ivector_extractor.sh --cmd "$train_cmd" --nj 10 \
+  steps/online/nnet2/train_ivector_extractor.sh --cmd "$train_cmd" --nj $num_jobs \
      data/${train_set}_sp_hires_nopitch exp/nnet3${nnet3_affix}/diag_ubm \
      exp/nnet3${nnet3_affix}/extractor || exit 1;
 fi
@@ -129,14 +130,14 @@ if [ $stage -le 6 ]; then
   temp_data_root=${ivectordir}
   utils/data/modify_speaker_info.sh --utts-per-spk-max 2 \
     data/${train_set}_sp_hires_nopitch ${temp_data_root}/${train_set}_sp_hires_nopitch_max2
-  steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj 30 \
+  steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj $num_jobs \
     ${temp_data_root}/${train_set}_sp_hires_nopitch_max2 \
     exp/nnet3${nnet3_affix}/extractor $ivectordir
 
   # Also extract iVectors for the test data, but in this case we don't need the speed
   # perturbation (sp).
   for data in $test_sets; do
-    steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj 8 \
+    steps/online/nnet2/extract_ivectors_online.sh --cmd "$train_cmd" --nj $num_jobs \
       data/${data}_hires_nopitch exp/nnet3${nnet3_affix}/extractor \
       exp/nnet3${nnet3_affix}/ivectors_${data}
   done
