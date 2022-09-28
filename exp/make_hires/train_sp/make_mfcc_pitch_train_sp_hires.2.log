@@ -1,663 +1,663 @@
-# paste-feats --length-tolerance=2 "ark:compute-mfcc-feats  --write-utt2dur=ark,t:exp/make_hires/train_sp/utt2dur.2 --verbose=2     --config=conf/mfcc_hires.conf scp,p:exp/make_hires/train_sp/wav_train_sp_hires.2.scp ark:- |" "ark,s,cs:compute-kaldi-pitch-feats --verbose=2       --config=conf/pitch.conf scp,p:exp/make_hires/train_sp/wav_train_sp_hires.2.scp ark:- |     process-kaldi-pitch-feats  ark:- ark:- |" ark:- | copy-feats --compress=true --write-num-frames=ark,t:exp/make_hires/train_sp/utt2num_frames.2 ark:- ark,scp:/home/hcilab1/kaldi/egs/formosa/s5/mfcc_perturbed_hires/raw_mfcc_pitch_train_sp_hires.2.ark,/home/hcilab1/kaldi/egs/formosa/s5/mfcc_perturbed_hires/raw_mfcc_pitch_train_sp_hires.2.scp 
-# Started at Sun Sep 25 18:34:35 CST 2022
+# paste-feats --length-tolerance=2 "ark:compute-mfcc-feats  --write-utt2dur=ark,t:exp/make_hires/train_sp/utt2dur.2 --verbose=2     --config=conf/mfcc_hires.conf scp,p:exp/make_hires/train_sp/wav_train_sp_hires.2.scp ark:- |" "ark,s,cs:compute-kaldi-pitch-feats --verbose=2       --config=conf/pitch.conf scp,p:exp/make_hires/train_sp/wav_train_sp_hires.2.scp ark:- |     process-kaldi-pitch-feats  ark:- ark:- |" ark:- | copy-feats --compress=true --write-num-frames=ark,t:exp/make_hires/train_sp/utt2num_frames.2 ark:- ark,scp:/home/hanasay/kaldi/egs/formosa/s5/mfcc_perturbed_hires/raw_mfcc_pitch_train_sp_hires.2.ark,/home/hanasay/kaldi/egs/formosa/s5/mfcc_perturbed_hires/raw_mfcc_pitch_train_sp_hires.2.scp 
+# Started at Wed Sep 28 18:28:27 CST 2022
 #
+copy-feats --compress=true --write-num-frames=ark,t:exp/make_hires/train_sp/utt2num_frames.2 ark:- ark,scp:/home/hanasay/kaldi/egs/formosa/s5/mfcc_perturbed_hires/raw_mfcc_pitch_train_sp_hires.2.ark,/home/hanasay/kaldi/egs/formosa/s5/mfcc_perturbed_hires/raw_mfcc_pitch_train_sp_hires.2.scp 
 paste-feats --length-tolerance=2 'ark:compute-mfcc-feats  --write-utt2dur=ark,t:exp/make_hires/train_sp/utt2dur.2 --verbose=2     --config=conf/mfcc_hires.conf scp,p:exp/make_hires/train_sp/wav_train_sp_hires.2.scp ark:- |' 'ark,s,cs:compute-kaldi-pitch-feats --verbose=2       --config=conf/pitch.conf scp,p:exp/make_hires/train_sp/wav_train_sp_hires.2.scp ark:- |     process-kaldi-pitch-feats  ark:- ark:- |' ark:- 
-copy-feats --compress=true --write-num-frames=ark,t:exp/make_hires/train_sp/utt2num_frames.2 ark:- ark,scp:/home/hcilab1/kaldi/egs/formosa/s5/mfcc_perturbed_hires/raw_mfcc_pitch_train_sp_hires.2.ark,/home/hcilab1/kaldi/egs/formosa/s5/mfcc_perturbed_hires/raw_mfcc_pitch_train_sp_hires.2.scp 
 compute-mfcc-feats --write-utt2dur=ark,t:exp/make_hires/train_sp/utt2dur.2 --verbose=2 --config=conf/mfcc_hires.conf scp,p:exp/make_hires/train_sp/wav_train_sp_hires.2.scp ark:- 
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1395
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1395
 compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:exp/make_hires/train_sp/wav_train_sp_hires.2.scp ark:- 
 process-kaldi-pitch-feats ark:- ark:- 
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1397
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1398
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1401
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1402
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1403
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1404
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1405
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1407
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 10 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1411
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1413
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1414
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1415
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1417
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1418
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1419
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1420
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1422
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1423
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 20 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1424
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1425
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1426
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1427
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1428
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1429
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1430
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1431
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1433
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1434
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 30 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1435
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1436
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1437
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1439
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1440
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1442
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1443
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1444
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1446
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1447
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 40 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1448
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1449
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1450
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1451
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1453
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1454
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1455
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 50 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1457
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1458
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1459
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 50 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1460
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1462
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1463
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1465
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1467
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1469
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1470
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1472
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1473
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1474
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 60 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1476
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1477
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1478
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1479
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1480
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1481
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1482
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1484
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1485
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1486
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 70 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1488
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1490
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1491
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1492
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1493
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1494
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1495
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1496
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1497
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1499
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 80 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1501
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1503
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1504
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1505
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1507
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1508
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1509
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1510
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1514
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1518
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 90 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1519
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1521
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1525
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1527
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1528
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1529
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1530
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1531
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1532
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1535
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 100 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1538
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 100 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1539
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1540
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1542
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1543
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1544
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1545
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1546
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1548
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1549
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 110 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1552
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1553
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1554
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1555
-sox WARN dither: dither clipped 6 samples; decrease volume?
-sox WARN sox: `/home/hcilab1/kaldi/egs/formosa/s5/audio/train/SuiSiann_1557.wav' balancing clipped 7 samples; decrease volume?
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1397
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1398
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1401
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1402
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1403
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1404
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1405
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1407
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 10 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1411
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1413
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1414
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1415
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1417
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1418
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1419
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1420
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1422
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1423
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 20 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1424
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1425
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1426
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1427
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1428
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1429
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1430
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1431
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1433
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1434
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 30 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1435
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1436
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1437
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1439
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1440
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1442
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1443
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1444
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1446
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1447
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 40 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1448
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1449
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1450
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1451
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1453
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1454
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1455
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1457
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1458
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1459
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 50 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1460
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 50 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1462
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1463
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1465
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1467
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1469
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1470
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1472
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1473
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1474
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 60 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1476
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1477
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1478
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1479
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1480
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1481
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1482
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1484
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1485
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1486
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 70 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1488
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1490
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1491
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1492
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1493
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1494
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1495
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1496
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1497
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1499
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 80 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1501
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1503
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1504
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1505
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1507
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1508
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1509
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1510
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1514
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1518
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 90 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1519
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1521
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1525
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1527
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1528
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1529
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1530
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1531
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1532
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1535
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 100 utterances
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 100 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1538
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1539
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1540
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1542
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1543
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1544
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1545
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1546
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1548
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1549
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 110 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1552
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1553
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1554
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1555
+sox WARN dither: dither clipped 7 samples; decrease volume?
+sox WARN sox: `/home/hanasay/kaldi/egs/formosa/s5/audio/train/SuiSiann_1557.wav' balancing clipped 7 samples; decrease volume?
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1557
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1558
 sox WARN dither: dither clipped 5 samples; decrease volume?
-sox WARN sox: `/home/hcilab1/kaldi/egs/formosa/s5/audio/train/SuiSiann_1557.wav' balancing clipped 7 samples; decrease volume?
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1557
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1558
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1559
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1560
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1561
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1562
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 120 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1563
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1564
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1571
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1575
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1576
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1577
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1578
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1579
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1584
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1586
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 130 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1587
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1589
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1590
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1594
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1595
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1596
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1597
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1600
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1601
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1602
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 140 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1604
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1605
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1606
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1607
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1608
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1609
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1612
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1613
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1614
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1616
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 150 utterances
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 150 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1617
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1618
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1619
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1622
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1623
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1624
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1625
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1626
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1627
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1628
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 160 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1631
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1633
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1634
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1635
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1636
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1639
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1640
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1641
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1642
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1644
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 170 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1646
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1647
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1648
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1649
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1650
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1651
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1653
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1655
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1656
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1657
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 180 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1658
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1659
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1660
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1661
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1662
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1663
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1664
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1665
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1666
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1667
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 190 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1668
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1670
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1671
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1673
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1674
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1676
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1677
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1678
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1679
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1682
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 200 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1683
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 200 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1684
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1685
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1686
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1688
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1689
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1692
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1693
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1695
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1696
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 210 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1697
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1698
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1700
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1701
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1702
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1704
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1709
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1710
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1712
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1713
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 220 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1714
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1715
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1716
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1717
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1718
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1719
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1720
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1723
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1724
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1726
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 230 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1728
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1732
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1735
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1736
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1740
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1741
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1742
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1744
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1745
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1747
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 240 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1748
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1749
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1750
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1751
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1752
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1753
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1754
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1756
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1757
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1758
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 250 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1759
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 250 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1760
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1761
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1762
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1763
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1764
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1766
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1767
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1768
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1769
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 260 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1770
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1773
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1775
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1777
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1778
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1780
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1782
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1783
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1784
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1786
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 270 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1787
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1788
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1789
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1790
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1791
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1792
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1793
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1794
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1795
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1796
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 280 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1797
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1798
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1800
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1801
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1803
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1804
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1805
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1806
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1807
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1808
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 290 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1809
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1811
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1812
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1813
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1814
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1817
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1818
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1819
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1821
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1823
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 300 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1824
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1825
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1826
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 300 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1827
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1828
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1829
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1831
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1832
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1833
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1835
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 310 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1837
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1839
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1841
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1842
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1843
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1844
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1845
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1847
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1848
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1849
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 320 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1850
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1851
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1852
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1854
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1855
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1856
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1857
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1858
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1859
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1860
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 330 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1861
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1863
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1865
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1866
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1867
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1869
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1870
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1874
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1875
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1878
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 340 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1879
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1880
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1881
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1883
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1884
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1887
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1888
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1889
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1890
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1891
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 350 utterances
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 350 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1893
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1894
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1895
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1896
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1897
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1898
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1899
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1900
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1901
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1902
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 360 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1903
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1904
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1905
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1907
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1908
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1909
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1912
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1913
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1914
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1915
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 370 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1916
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1917
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1918
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1919
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1921
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1923
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1924
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1925
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1927
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1928
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 380 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1929
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1932
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1935
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1937
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1938
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1939
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1940
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1941
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1942
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1943
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 390 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1944
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1945
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1946
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1948
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1949
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1950
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1951
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1952
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1955
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1956
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 400 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1957
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1958
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 400 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1959
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1960
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1961
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1962
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1966
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1967
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1968
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1969
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 410 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1970
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1972
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1973
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1974
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1975
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1979
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1980
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1983
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1986
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1987
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 420 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1989
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1990
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1991
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1992
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1993
+sox WARN sox: `/home/hanasay/kaldi/egs/formosa/s5/audio/train/SuiSiann_1557.wav' balancing clipped 7 samples; decrease volume?
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1559
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1560
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1561
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1562
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 120 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1563
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1564
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1571
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1575
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1576
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1577
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1578
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1579
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1584
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1586
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 130 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1587
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1589
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1590
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1594
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1595
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1596
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1597
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1600
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1601
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1602
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 140 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1604
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1605
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1606
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1607
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1608
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1609
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1612
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1613
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1614
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 150 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1616
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 150 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1617
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1618
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1619
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1622
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1623
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1624
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1625
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1626
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1627
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1628
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 160 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1631
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1633
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1634
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1635
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1636
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1639
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1640
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1641
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1642
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1644
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 170 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1646
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1647
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1648
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1649
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1650
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1651
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1653
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1655
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1656
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1657
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 180 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1658
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1659
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1660
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1661
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1662
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1663
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1664
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1665
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1666
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1667
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 190 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1668
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1670
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1671
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1673
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1674
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1676
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1677
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1678
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1679
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1682
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 200 utterances
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 200 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1683
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1684
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1685
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1686
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1688
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1689
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1692
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1693
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1695
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1696
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 210 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1697
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1698
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1700
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1701
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1702
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1704
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1709
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1710
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1712
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1713
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 220 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1714
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1715
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1716
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1717
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1718
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1719
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1720
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1723
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1724
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1726
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 230 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1728
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1732
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1735
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1736
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1740
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1741
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1742
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1744
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1745
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1747
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 250 utterances
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 240 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1748
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1749
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1750
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1751
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1752
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1753
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1754
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1756
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1757
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1758
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 250 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1759
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1760
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1761
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1762
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1763
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1764
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1766
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1767
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1768
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1769
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 260 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1770
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1773
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1775
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1777
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1778
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1780
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1782
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1783
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1784
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1786
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 270 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1787
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1788
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1789
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1790
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1791
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1792
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1793
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1794
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1795
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1796
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 280 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1797
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1798
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1800
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1801
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1803
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1804
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1805
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1806
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1807
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1808
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 290 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1809
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1811
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1812
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1813
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1814
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1817
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1818
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1819
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 300 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1821
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1823
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 300 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1824
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1825
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1826
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1827
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1828
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1829
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1831
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1832
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1833
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1835
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 310 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1837
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1839
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1841
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1842
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1843
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1844
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1845
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1847
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1848
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1849
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 320 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1850
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1851
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1852
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1854
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1855
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1856
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1857
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1858
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1859
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1860
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 330 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1861
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1863
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1865
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1866
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1867
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1869
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1870
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1874
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1875
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1878
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 340 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1879
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1880
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1881
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1883
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1884
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1887
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1888
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 350 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1889
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1890
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1891
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 350 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1893
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1894
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1895
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1896
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1897
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1898
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1899
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1900
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1901
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1902
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 360 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1903
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1904
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1905
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1907
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1908
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1909
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1912
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1913
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1914
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1915
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 370 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1916
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1917
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1918
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1919
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1921
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1923
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1924
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1925
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1927
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1928
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 380 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1929
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1932
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1935
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1937
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1938
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1939
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1940
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1941
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1942
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1943
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 390 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1944
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1945
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1946
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1948
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1949
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1950
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1951
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1952
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1955
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 400 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1956
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 400 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1957
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1958
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1959
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1960
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1961
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1962
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1966
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1967
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1968
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1969
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 410 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1970
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1972
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1973
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1974
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1975
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1979
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1980
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1983
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1986
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1987
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 420 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1989
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1990
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1991
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1992
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1993
 sox WARN dither: dither clipped 2 samples; decrease volume?
-sox WARN sox: `/home/hcilab1/kaldi/egs/formosa/s5/audio/train/SuiSiann_1995.wav' balancing clipped 2 samples; decrease volume?
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1994
-sox WARN dither: dither clipped 1 samples; decrease volume?
-sox WARN sox: `/home/hcilab1/kaldi/egs/formosa/s5/audio/train/SuiSiann_1995.wav' balancing clipped 2 samples; decrease volume?
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1995
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1996
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1997
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1998
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 430 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2000
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2001
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2002
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2003
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2004
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2005
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2006
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2008
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2009
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2010
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 440 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2011
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2015
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2016
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2018
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2019
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2020
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2021
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2022
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2023
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2024
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 450 utterances
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 450 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2025
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2026
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2027
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2028
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2029
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2030
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2038
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2039
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2040
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2041
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 460 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2042
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2043
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2047
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2048
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2049
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2050
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2051
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2052
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2054
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2056
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 470 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2057
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2058
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2059
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2060
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2062
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2063
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2064
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2065
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2066
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2067
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 480 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2068
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2069
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2070
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2071
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2072
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2073
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2075
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2077
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2078
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2079
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 490 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2081
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2082
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2083
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2084
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2085
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2086
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2087
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2089
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2091
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2093
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 500 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2094
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 500 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2095
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2096
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2097
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2101
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2108
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2113
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2115
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2116
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2121
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 510 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2126
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2127
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2136
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2138
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2139
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2141
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2142
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2147
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2149
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2151
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 520 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2157
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2159
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2160
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2162
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2163
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2165
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2166
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2167
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2173
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2174
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 530 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2177
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2181
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2182
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2183
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2184
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2190
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2197
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2198
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2199
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2201
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 540 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2202
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2203
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2205
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2208
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2210
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2213
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2215
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2216
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2218
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2219
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 550 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2221
-VLOG[2] (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:107) Processed 550 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2223
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2230
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2233
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2242
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2248
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2259
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2261
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2262
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2264
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 560 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2265
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2267
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2268
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2269
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2272
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2273
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2274
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2275
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2276
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2278
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:181) Processed 570 utterances
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2281
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2282
-LOG (compute-kaldi-pitch-feats[5.5.1047~1-09a63]:main():compute-kaldi-pitch-feats.cc:110) Done 572 utterances, 0 with errors.
-VLOG[2] (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2286
-LOG (compute-mfcc-feats[5.5.1047~1-09a63]:main():compute-mfcc-feats.cc:185)  Done 572 out of 572 utterances.
-LOG (process-kaldi-pitch-feats[5.5.1047~1-09a63]:main():process-kaldi-pitch-feats.cc:85) Post-processed pitch for 572 utterances.
-LOG (paste-feats[5.5.1047~1-09a63]:main():paste-feats.cc:158) Done 572 utts, errors on 0
-LOG (copy-feats[5.5.1047~1-09a63]:main():copy-feats.cc:143) Copied 572 feature matrices.
-# Accounting: time=8 threads=1
-# Ended (code 0) at Sun Sep 25 18:34:43 CST 2022, elapsed time 8 seconds
+sox WARN sox: `/home/hanasay/kaldi/egs/formosa/s5/audio/train/SuiSiann_1995.wav' balancing clipped 2 samples; decrease volume?
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1994
+sox WARN dither: dither clipped 2 samples; decrease volume?
+sox WARN sox: `/home/hanasay/kaldi/egs/formosa/s5/audio/train/SuiSiann_1995.wav' balancing clipped 2 samples; decrease volume?
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1995
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1996
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1997
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_1998
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 430 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2000
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2001
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2002
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2003
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2004
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2005
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2006
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2008
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2009
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2010
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 440 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2011
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2015
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2016
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2018
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2019
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2020
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2021
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2022
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2023
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2024
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 450 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2025
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 450 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2026
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2027
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2028
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2029
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2030
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2038
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2039
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2040
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2041
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 460 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2042
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2043
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2047
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2048
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2049
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2050
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2051
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2052
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2054
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2056
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 470 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2057
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2058
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2059
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2060
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2062
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2063
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2064
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2065
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2066
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2067
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 480 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2068
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2069
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2070
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2071
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2072
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2073
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2075
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2077
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2078
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2079
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 490 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2081
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2082
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2083
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2084
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2085
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2086
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2087
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2089
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2091
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 500 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2093
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 500 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2094
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2095
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2096
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2097
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2101
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2108
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2113
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2115
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2116
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2121
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 510 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2126
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2127
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2136
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2138
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2139
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2141
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2142
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2147
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2149
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2151
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 520 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2157
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2159
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2160
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2162
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2163
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2165
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2166
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2167
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2173
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2174
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 530 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2177
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2181
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2182
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2183
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2184
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2190
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2197
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2198
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2199
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2201
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 540 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2202
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2203
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2205
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2208
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2210
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2213
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2215
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2216
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2218
+VLOG[2] (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:107) Processed 550 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2219
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 550 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2221
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2223
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2230
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2233
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2242
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2248
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2259
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2261
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2262
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2264
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 560 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2265
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2267
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2268
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2269
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2272
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2273
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2274
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2275
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2276
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2278
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:181) Processed 570 utterances
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2281
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2282
+VLOG[2] (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:182) Processed features for key SuiSiann_2286
+LOG (compute-mfcc-feats[5.5.1049~1-4592c5]:main():compute-mfcc-feats.cc:185)  Done 572 out of 572 utterances.
+LOG (compute-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():compute-kaldi-pitch-feats.cc:110) Done 572 utterances, 0 with errors.
+LOG (process-kaldi-pitch-feats[5.5.1049~1-4592c5]:main():process-kaldi-pitch-feats.cc:85) Post-processed pitch for 572 utterances.
+LOG (paste-feats[5.5.1049~1-4592c5]:main():paste-feats.cc:158) Done 572 utts, errors on 0
+LOG (copy-feats[5.5.1049~1-4592c5]:main():copy-feats.cc:143) Copied 572 feature matrices.
+# Accounting: time=16 threads=1
+# Ended (code 0) at Wed Sep 28 18:28:43 CST 2022, elapsed time 16 seconds

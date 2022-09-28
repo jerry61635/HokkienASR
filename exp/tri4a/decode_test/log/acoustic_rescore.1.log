@@ -1,5 +1,5 @@
 # gmm-rescore-lattice exp/tri4a/final.mdl "ark:gunzip -c exp/tri4a/decode_test/lat.tmp.1.gz|" "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri4a/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split1/1/utt2spk ark:exp/tri4a/decode_test/trans.1 ark:- ark:- |" ark:- | lattice-determinize-pruned --acoustic-scale=0.083333 --beam=6.0 ark:- "ark:|gzip -c > exp/tri4a/decode_test/lat.1.gz" && rm exp/tri4a/decode_test/lat.tmp.1.gz 
-# Started at Sun Sep 25 13:15:55 CST 2022
+# Started at Wed Sep 28 18:11:10 CST 2022
 #
 lattice-determinize-pruned --acoustic-scale=0.083333 --beam=6.0 ark:- 'ark:|gzip -c > exp/tri4a/decode_test/lat.1.gz' 
 gmm-rescore-lattice exp/tri4a/final.mdl 'ark:gunzip -c exp/tri4a/decode_test/lat.tmp.1.gz|' 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri4a/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split1/1/utt2spk ark:exp/tri4a/decode_test/trans.1 ark:- ark:- |' ark:- 
@@ -7,13 +7,13 @@ transform-feats exp/tri4a/final.mat ark:- ark:-
 splice-feats ark:- ark:- 
 apply-cmvn --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- 
 transform-feats --utt2spk=ark:data/test/split1/1/utt2spk ark:exp/tri4a/decode_test/trans.1 ark:- ark:- 
-LOG (apply-cmvn[5.5.1047~1-09a63]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 431 utterances, errors on 0
-LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -22.8546 over 182438 frames.
-LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:161) Applied transform to 431 utterances; 0 had errors.
-LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:158) Overall average logdet is -1.44119 over 182438 frames.
-LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:161) Applied transform to 431 utterances; 0 had errors.
-LOG (gmm-rescore-lattice[5.5.1047~1-09a63]:main():gmm-rescore-lattice.cc:103) Done 431 lattices with errors on 0, #frames is 182438
-LOG (lattice-determinize-pruned[5.5.1047~1-09a63]:main():lattice-determinize-pruned.cc:159) Average input-lattice depth (measured at at state level) is 4.89216, output depth is 3.51076, over 182438 frames  (average num-frames = 423.29).
-LOG (lattice-determinize-pruned[5.5.1047~1-09a63]:main():lattice-determinize-pruned.cc:164) Done 431 lattices, determinization finished earlier than specified by the beam (or output was empty) on 0 of these.
+LOG (apply-cmvn[5.5.1049~1-4592c5]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 431 utterances, errors on 0
+LOG (transform-feats[5.5.1049~1-4592c5]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -23.9099 over 182438 frames.
+LOG (transform-feats[5.5.1049~1-4592c5]:main():transform-feats.cc:161) Applied transform to 431 utterances; 0 had errors.
+LOG (transform-feats[5.5.1049~1-4592c5]:main():transform-feats.cc:158) Overall average logdet is -1.45755 over 182438 frames.
+LOG (transform-feats[5.5.1049~1-4592c5]:main():transform-feats.cc:161) Applied transform to 431 utterances; 0 had errors.
+LOG (gmm-rescore-lattice[5.5.1049~1-4592c5]:main():gmm-rescore-lattice.cc:103) Done 431 lattices with errors on 0, #frames is 182438
+LOG (lattice-determinize-pruned[5.5.1049~1-4592c5]:main():lattice-determinize-pruned.cc:159) Average input-lattice depth (measured at at state level) is 4.9983, output depth is 3.6892, over 182438 frames  (average num-frames = 423.29).
+LOG (lattice-determinize-pruned[5.5.1049~1-4592c5]:main():lattice-determinize-pruned.cc:164) Done 431 lattices, determinization finished earlier than specified by the beam (or output was empty) on 0 of these.
 # Accounting: time=2 threads=1
-# Ended (code 0) at Sun Sep 25 13:15:57 CST 2022, elapsed time 2 seconds
+# Ended (code 0) at Wed Sep 28 18:11:12 CST 2022, elapsed time 2 seconds

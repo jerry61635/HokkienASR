@@ -1,28 +1,28 @@
-# lattice-determinize-pruned --acoustic-scale=0.083333 --beam=4.0 "ark:gunzip -c exp/tri5a/decode_test/lat.tmp.1.gz|" ark:- | lattice-to-post --acoustic-scale=0.083333 ark:- ark:- | weight-silence-post 0.01 1 exp/tri5a/final.mdl ark:- ark:- | gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/test/split1/1/spk2utt exp/tri5a/final.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri5a/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split1/1/utt2spk ark:exp/tri5a/decode_test/pre_trans.1 ark:- ark:- |" ark,s,cs:- ark:exp/tri5a/decode_test/trans_tmp.1 && compose-transforms --b-is-affine=true ark:exp/tri5a/decode_test/trans_tmp.1 ark:exp/tri5a/decode_test/pre_trans.1 ark:exp/tri5a/decode_test/trans.1 
-# Started at Sun Sep 25 13:26:40 CST 2022
+# lattice-determinize-pruned --acoustic-scale=0.083333 --beam=4.0 "ark:gunzip -c exp/tri5a/decode_test/lat.tmp.1.gz|" ark:- | lattice-to-post --acoustic-scale=0.083333 ark:- ark:- | weight-silence-post 0.01 1:2 exp/tri5a/final.mdl ark:- ark:- | gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/test/split1/1/spk2utt exp/tri5a/final.mdl "ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri5a/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split1/1/utt2spk ark:exp/tri5a/decode_test/pre_trans.1 ark:- ark:- |" ark,s,cs:- ark:exp/tri5a/decode_test/trans_tmp.1 && compose-transforms --b-is-affine=true ark:exp/tri5a/decode_test/trans_tmp.1 ark:exp/tri5a/decode_test/pre_trans.1 ark:exp/tri5a/decode_test/trans.1 
+# Started at Wed Sep 28 18:24:23 CST 2022
 #
-weight-silence-post 0.01 1 exp/tri5a/final.mdl ark:- ark:- 
+weight-silence-post 0.01 1:2 exp/tri5a/final.mdl ark:- ark:- 
 gmm-est-fmllr --fmllr-update-type=full --spk2utt=ark:data/test/split1/1/spk2utt exp/tri5a/final.mdl 'ark,s,cs:apply-cmvn  --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- | splice-feats  ark:- ark:- | transform-feats exp/tri5a/final.mat ark:- ark:- | transform-feats --utt2spk=ark:data/test/split1/1/utt2spk ark:exp/tri5a/decode_test/pre_trans.1 ark:- ark:- |' ark,s,cs:- ark:exp/tri5a/decode_test/trans_tmp.1 
 lattice-to-post --acoustic-scale=0.083333 ark:- ark:- 
 lattice-determinize-pruned --acoustic-scale=0.083333 --beam=4.0 'ark:gunzip -c exp/tri5a/decode_test/lat.tmp.1.gz|' ark:- 
-transform-feats exp/tri5a/final.mat ark:- ark:- 
-transform-feats --utt2spk=ark:data/test/split1/1/utt2spk ark:exp/tri5a/decode_test/pre_trans.1 ark:- ark:- 
 apply-cmvn --utt2spk=ark:data/test/split1/1/utt2spk scp:data/test/split1/1/cmvn.scp scp:data/test/split1/1/feats.scp ark:- 
+transform-feats exp/tri5a/final.mat ark:- ark:- 
 splice-feats ark:- ark:- 
-LOG (lattice-determinize-pruned[5.5.1047~1-09a63]:main():lattice-determinize-pruned.cc:159) Average input-lattice depth (measured at at state level) is 6.94392, output depth is 2.73418, over 182438 frames  (average num-frames = 423.29).
-LOG (lattice-determinize-pruned[5.5.1047~1-09a63]:main():lattice-determinize-pruned.cc:164) Done 431 lattices, determinization finished earlier than specified by the beam (or output was empty) on 0 of these.
-LOG (lattice-to-post[5.5.1047~1-09a63]:main():lattice-to-post.cc:107) Overall average log-like/frame is -4.42067 over 182438 frames.  Average acoustic like/frame is -4.15296
-LOG (lattice-to-post[5.5.1047~1-09a63]:main():lattice-to-post.cc:111) Done 431 lattices.
-LOG (apply-cmvn[5.5.1047~1-09a63]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 431 utterances, errors on 0
-LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -22.8546 over 182438 frames.
-LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:161) Applied transform to 431 utterances; 0 had errors.
-LOG (weight-silence-post[5.5.1047~1-09a63]:main():weight-silence-post.cc:95) Done 431 posteriors.
-LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:158) Overall average logdet is -1.40907 over 182438 frames.
-LOG (transform-feats[5.5.1047~1-09a63]:main():transform-feats.cc:161) Applied transform to 431 utterances; 0 had errors.
-LOG (gmm-est-fmllr[5.5.1047~1-09a63]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.012506 per frame over 134496 frames.
-LOG (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:143) For speaker SuiSiann, auxf-impr from fMLLR is 0.012506, over 134496 frames.
-LOG (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:188) Done 431 files, 0 with no posts, 0 with other errors.
-LOG (gmm-est-fmllr[5.5.1047~1-09a63]:main():gmm-est-fmllr.cc:190) Overall fMLLR auxf impr per frame is 0.012506 over 134496 frames.
+transform-feats --utt2spk=ark:data/test/split1/1/utt2spk ark:exp/tri5a/decode_test/pre_trans.1 ark:- ark:- 
+LOG (lattice-determinize-pruned[5.5.1049~1-4592c5]:main():lattice-determinize-pruned.cc:159) Average input-lattice depth (measured at at state level) is 6.9216, output depth is 2.74351, over 182438 frames  (average num-frames = 423.29).
+LOG (lattice-determinize-pruned[5.5.1049~1-4592c5]:main():lattice-determinize-pruned.cc:164) Done 431 lattices, determinization finished earlier than specified by the beam (or output was empty) on 0 of these.
+LOG (lattice-to-post[5.5.1049~1-4592c5]:main():lattice-to-post.cc:107) Overall average log-like/frame is -4.42087 over 182438 frames.  Average acoustic like/frame is -4.15213
+LOG (lattice-to-post[5.5.1049~1-4592c5]:main():lattice-to-post.cc:111) Done 431 lattices.
+LOG (apply-cmvn[5.5.1049~1-4592c5]:main():apply-cmvn.cc:162) Applied cepstral mean normalization to 431 utterances, errors on 0
+LOG (transform-feats[5.5.1049~1-4592c5]:main():transform-feats.cc:158) Overall average [pseudo-]logdet is -23.9099 over 182438 frames.
+LOG (transform-feats[5.5.1049~1-4592c5]:main():transform-feats.cc:161) Applied transform to 431 utterances; 0 had errors.
+LOG (weight-silence-post[5.5.1049~1-4592c5]:main():weight-silence-post.cc:95) Done 431 posteriors.
+LOG (transform-feats[5.5.1049~1-4592c5]:main():transform-feats.cc:158) Overall average logdet is -1.42245 over 182438 frames.
+LOG (transform-feats[5.5.1049~1-4592c5]:main():transform-feats.cc:161) Applied transform to 431 utterances; 0 had errors.
+LOG (gmm-est-fmllr[5.5.1049~1-4592c5]:ComputeFmllrMatrixDiagGmmFull():fmllr-diag-gmm.cc:262) fMLLR objf improvement is 0.0115227 per frame over 133562 frames.
+LOG (gmm-est-fmllr[5.5.1049~1-4592c5]:main():gmm-est-fmllr.cc:143) For speaker SuiSiann, auxf-impr from fMLLR is 0.0115227, over 133562 frames.
+LOG (gmm-est-fmllr[5.5.1049~1-4592c5]:main():gmm-est-fmllr.cc:188) Done 431 files, 0 with no posts, 0 with other errors.
+LOG (gmm-est-fmllr[5.5.1049~1-4592c5]:main():gmm-est-fmllr.cc:190) Overall fMLLR auxf impr per frame is 0.0115227 over 133562 frames.
 compose-transforms --b-is-affine=true ark:exp/tri5a/decode_test/trans_tmp.1 ark:exp/tri5a/decode_test/pre_trans.1 ark:exp/tri5a/decode_test/trans.1 
-# Accounting: time=5 threads=1
-# Ended (code 0) at Sun Sep 25 13:26:45 CST 2022, elapsed time 5 seconds
+# Accounting: time=9 threads=1
+# Ended (code 0) at Wed Sep 28 18:24:32 CST 2022, elapsed time 9 seconds

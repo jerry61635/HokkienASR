@@ -15,7 +15,7 @@ mkdir -p $dict_dir
 rm -f $dict_dir/lexicon.txt
 touch $dict_dir/lexicon.txt
 cat $source_dir/lexicon.txt > $dict_dir/lexicon.txt
-echo "<SIL> SIL"	>> $dict_dir/lexicon.txt
+echo -e "<SIL> SIL\n<UNK> SPN"	>> $dict_dir/lexicon.txt
 
 #
 # define silence phone
@@ -23,7 +23,7 @@ echo "<SIL> SIL"	>> $dict_dir/lexicon.txt
 rm -f $dict_dir/silence_phones.txt
 touch $dict_dir/silence_phones.txt
 
-echo "SIL"	> $dict_dir/silence_phones.txt
+echo -e "SIL\nSPN"	> $dict_dir/silence_phones.txt
 
 #
 # find nonsilence phones

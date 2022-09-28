@@ -201,7 +201,7 @@ fi
 # getting results (see RESULTS file)
 if [ $stage -le 8 ]; then
   echo "$0: extract the results"
-  for test_set in test eval; do
+  for test_set in test train; do
   echo "WER: $test_set"
   for x in exp/*/decode_${test_set}*; do [ -d $x ] && grep WER $x/wer_* | utils/best_wer.sh; done 2>/dev/null
   for x in exp/*/*/decode_${test_set}*; do [ -d $x ] && grep WER $x/wer_* | utils/best_wer.sh; done 2>/dev/null
