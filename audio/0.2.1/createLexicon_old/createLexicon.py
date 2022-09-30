@@ -48,16 +48,13 @@ for rrr in range(len(rows)):
     for r in range(len(row[3])):
         #確認是不是符號
         if check_punctuation(row[3][r]):#如果是符號
-            # #檢查是不是連字號
-            # if check_hyphen(row[3][r]) and nowSound!='':#是連字號
-            #     nowSound=nowSound+'-'#加上連字號
-            # else:#不是連字號
-            #     if nowSound!='':#當前音存在
-            #         sound.append(nowSound)#把當前音放入到音清單裡面
-            #         nowSound=''#清空當前音
-            if nowSound!='':#當前音存在
-                sound.append(nowSound)#把當前音放入到音清單裡面
-                nowSound=''#清空當前音
+            #檢查是不是連字號
+            if check_hyphen(row[3][r]) and nowSound!='':#是連字號
+                nowSound=nowSound+'-'#加上連字號
+            else:#不是連字號
+                if nowSound!='':#當前音存在
+                    sound.append(nowSound)#把當前音放入到音清單裡面
+                    nowSound=''#清空當前音
         else:#如果不是符號
             nowSound=nowSound+row[3][r]#把字母放入到當前音後面
 
